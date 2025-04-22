@@ -26,9 +26,9 @@ app.get('/', (req, res) => {
 // Middleware to handle 404 errors
 
 app.use((req, res) => {
-    console.log('404: Page Not Found');
+    console.log('404: Page Not Found' + req.url);
     // style this in the future
-    res.status(404).send('404: Page Not Found');
+    res.status(404).render('404.ejs');
 })
 
 // Middleware to handle server errors
