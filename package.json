@@ -11,11 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/BrahamjeetRandhawa/Dashboard.git"
   },
-  "author": "",
+  "author": "Braham",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BrahamjeetRandhawa/Dashboard/issues"
   },
   "homepage": "https://github.com/BrahamjeetRandhawa/Dashboard#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
 }
