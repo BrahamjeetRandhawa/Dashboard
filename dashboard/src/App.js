@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+import Topbar from './Topbar'; // Import the Topbar component
 
 function App() {
   return (
