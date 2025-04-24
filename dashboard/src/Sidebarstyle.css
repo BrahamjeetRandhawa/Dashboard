@@ -1,8 +1,7 @@
 .Sidebar {
     border: 5px solid black;
-    width: 30%;
-    margin-top: 1vh;
-    height: 95vh;
+    width: 40%;
+    height: 100%;
     background-color: darkblue;
     flex-wrap: wrap;
     display: flex;
@@ -23,16 +22,16 @@ li {
     margin-left: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
     margin-top: 3%;
     padding: 0.2em;
     border-radius: 20px;
+    font-size: 18px;
 }
 
 a {
-    color: red;
+    color: white;
     text-decoration: none;
-    font-size: 24px;
     display: flex;
     align-items: center;
 }
