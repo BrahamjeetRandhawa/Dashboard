@@ -4,7 +4,7 @@ import './Filterstyle.css';
 function Filter() {
     return (
         <div className="Filter">
-            <label htmlFor="filter">Filter:</label>
+            <label className= "FilterName" htmlFor="filter">Filter:</label>
             <button type="button">Apply Filter</button>
             <button type="button">Clear Filter</button>
             <button type="button">Save Filter</button>

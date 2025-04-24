@@ -1,7 +1,7 @@
 .Sidebar {
     border: 5px solid black;
     width: 30%;
-    margin-top: 5vh;
+    margin-top: 1vh;
     height: 95vh;
     background-color: darkblue;
     flex-wrap: wrap;
@@ -35,4 +35,15 @@ a {
     font-size: 24px;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 800px) {
+    a {
+        font-size: 12px;
+    }
+
+    ul {
+        justify-content: center;
+        align-items: center;
+    }
 }
