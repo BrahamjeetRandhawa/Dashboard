@@ -7,6 +7,9 @@
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
+    border: 3px solid orange;
+    width: 65%;
+    margin-left: 30%;
 }
 
 
@@ -20,6 +23,26 @@ button {
     width: 100%;
     background-color: darkblue;
     color: white;
-    font-size: 24px;
+    font-size: 14px;
     margin-top: 2%;
+    height: 3em;
+    
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    button {
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .Filter {
+        flex-direction: column;
+        align-items: stretch;
+        width: 20%;
+        display: flex;
+        margin-left: 70%;
+    }
 }

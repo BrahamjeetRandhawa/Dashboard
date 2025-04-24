@@ -7,11 +7,13 @@ import Filter from './Filter'; // Import the Filter component
 
 function App() {
   return (
-    <div className="App-container">
-      <Top className="Topbar" />
-      <Filter className="Filter" />
-      <Sidebar className="Sidebar" />
-    </div>
+      <body className="App-body">
+        <header>
+          <Top className="Topbar" />
+        </header>
+        <Filter className="Filter" />
+        <Sidebar className="Sidebar" />
+      </body>
   );
 }
 
