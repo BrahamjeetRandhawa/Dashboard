@@ -1,9 +1,27 @@
+.Topbar {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 3px solid orange;
+}
+
+.Topbar-left {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+}
+
+
 h1 {
     display: flex;
     justify-content: right;
     align-items: center;
     margin: auto;
     margin-top: 3%;
-    width: 90%;
+    width: auto;
     border: 3px solid black;
+}
+
+h2 {
+    display: flex;
+    border: 9px solid green;
 }
