@@ -38,8 +38,18 @@ function Filter() {
             <div className="Filter_title">
             <label htmlFor="Account Name">ACCOUNT NAME</label>
             <select name="Region" id="Region">
-                <option value="Finastra">finastra</option>
+                <option value="Finastra">Finastra</option>
                 <option value="GER">GER</option>
+                <option value="RGER">RGER</option>
+                <option value="RGER">RGER</option>
+                <option value="GTRRTHY">GTRRTHY</option>
+            </select>
+            </div>
+            <div className="Filter_title">
+            <label htmlFor="Location">LOCATION</label>
+            <select name="Region" id="Region">
+                <option value="Onsite">Onsite</option>
+                <option value="Offsite">Offsite</option>
                 <option value="RGER">RGER</option>
                 <option value="RGER">RGER</option>
                 <option value="GTRRTHY">GTRRTHY</option>

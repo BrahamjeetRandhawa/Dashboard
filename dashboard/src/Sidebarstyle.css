@@ -1,8 +1,7 @@
 .Sidebar {
-    border: 5px solid black;
-    width: 40%;
+    width: 30%;
     height: 100vh;
-    background-color: darkblue;
+    background-color: royalblue;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@
 
 ul {
     padding: 0;
-    width: 90%;
+    width: 95%;
 }
 
 li {
