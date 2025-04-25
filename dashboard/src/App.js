@@ -11,8 +11,12 @@ function App() {
         <header>
           <Top className="Topbar" />
         </header>
-        <Filter className="Filter" />
-        <Sidebar className="Sidebar" />
+        <main className="Main">
+        <div className="Main-header">
+          <Filter className="Filter" />
+          <Sidebar className="Sidebar" />
+        </div>
+        </main>
       </body>
   );
 }

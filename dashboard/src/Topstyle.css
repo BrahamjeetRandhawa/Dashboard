@@ -1,7 +1,12 @@
 .Topbar {
     display: flex;
     flex-direction: row-reverse;
-    border: 3px solid orange;
+    position: relative;
+    z-index: 1;
+    box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
+    
 }
 
 .Topbar-left {
@@ -23,5 +28,6 @@ h1 {
 
 h2 {
     display: flex;
+    color: lightseagreen;
     border: 9px solid green;
 }

@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 10px;
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    border: 3px solid orange;
-    width: 60%;
-    margin-left: 40%;
-    margin-top: 5vh;
+    height: 30%;  
+    width: 100%; 
+    box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 10px 17px -6px rgba(0,0,0,0.75);
 }
 
 .FilterName {
@@ -20,15 +20,24 @@
     height: 2em;
 }
 
+.Filter_title {
+    flex-direction: column;
+}
 
-button {
-    border: 5px solid black;
+select {
     width: 100%;
-    background-color: darkblue;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.Filter_button {
+    border: 5px solid black;
+    width: 30%;
+    background-color: lightblue;
     color: white;
-    font-size: 14px;
-    margin-top: 2%;
-    height: 3em;
+    font-size: 20px;
+    /* margin-top: 2%; */
+    padding: 5px;
     
     flex-wrap: wrap;
 }
@@ -36,14 +45,16 @@ button {
 
 @media (max-width: 800px) {
     .Filter {
-        flex-direction: column;
-        align-items: stretch;
-        width: 20%;
+        flex-direction: row;
+        width: 100%;
         display: flex;
-        margin-left: 70%;
     }
     
     button {
+        font-size: 12px;
+        width: 100%;
+    }
+    label {
         font-size: 12px;
         width: 100%;
     }
