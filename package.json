@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "client": "set NODE_OPTIONS=--openssl-legacy-provider && npm start --prefix dashboard",
-   "server": "nodemon server.js",
+    "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
@@ -22,8 +22,10 @@
   "homepage": "https://github.com/BrahamjeetRandhawa/Dashboard#readme",
   "keywords": [],
   "dependencies": {
+    "concurrently": "^9.1.2",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "react-scripts": "^5.0.1"
   }
 }
