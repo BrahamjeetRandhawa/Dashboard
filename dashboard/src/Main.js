@@ -26,8 +26,6 @@ function Main() {
 
         <span className="line"></span>
 
-
-
         <div className="Box">
           <div className="Circle">
             <h4>28</h4>
@@ -48,7 +46,6 @@ function Main() {
         </div>
         
         <span className="line"></span>
-
 
         <div className="Box">
           <div className="Circle">
