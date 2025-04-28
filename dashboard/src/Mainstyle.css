@@ -3,7 +3,16 @@
     width: 70%;
 }
 
-.Main-style > h2 {
+.Main-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    margin: auto;
+}
+
+.Main-title > h2 {
     width: 15%;
     display: flex;
     justify-content: center;

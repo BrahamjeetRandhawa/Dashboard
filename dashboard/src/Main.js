@@ -3,7 +3,10 @@ import "./Mainstyle.css";
 function Main() {
   return (
     <div className="Main-style">
-      <h2>FINANCIALS</h2>
+        <div className="Main-title">
+            <h2>FINANCIALS</h2>
+            <p>Source: PP</p>
+        </div>
       <div className="Boxes">
         <div className="Box">
           <div className="Circle">
