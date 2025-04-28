@@ -25,7 +25,7 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: royalblue;
     width: 30%;
 }
 
@@ -40,7 +40,7 @@
 
 .Topbar-left > h2 {
     display: flex;
-    color: lightseagreen;
+    color: royalblue;
     margin-bottom: 0;
 }
 
