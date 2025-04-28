@@ -35,7 +35,7 @@ h1 {
 }
  
 
-h2 {
+.Topbar-left > h2 {
     display: flex;
     color: lightseagreen;
     margin-bottom: 0;
