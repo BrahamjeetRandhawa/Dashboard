@@ -18,11 +18,11 @@ function Filter() {
             <label htmlFor="Year">YEAR</label>
             <select name="Year" id="Year">
                 <option value="Year">Year</option>
-                <option value="2024-2025">2025</option>
-                <option value="2023-2024">2024</option>
-                <option value="2022-2023">2023</option>
-                <option value="2021-2022">2022</option>
-                <option value="2020-2021">2021</option>
+                <option value="2024-2025">2024-2025</option>
+                <option value="2023-2024">2023-2024</option>
+                <option value="2022-2023">2022-2023</option>
+                <option value="2021-2022">2021-2022</option>
+                <option value="2020-2021">2020-2021</option>
             </select>
             </div>
             <div className="Filter_title">

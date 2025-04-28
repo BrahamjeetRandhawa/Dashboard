@@ -25,19 +25,22 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: royalblue;
+    width: 30%;
 }
 
-h1 {
+
+.Topbar-right > h1 {
     font-size: 40px;
     font-weight: lighter;
+    margin-right: .5em;
     color: white;
 }
  
 
-h2 {
+.Topbar-left > h2 {
     display: flex;
-    color: lightseagreen;
+    color: royalblue;
     margin-bottom: 0;
 }
 

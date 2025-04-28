@@ -1,6 +1,6 @@
 .Sidebar {
-    width: 30%;
-    height: 100vh;
+    /* width: 30%;
+    height: 100vh; */
     background-color: royalblue;
     flex-wrap: wrap;
     display: flex;
@@ -18,7 +18,7 @@ li {
     border-bottom: 0.1px solid rgba(255, 255, 255, 0.5);
     margin-top: 3%;
     padding: 0.2em;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a {
