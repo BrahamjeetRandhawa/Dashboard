@@ -63,3 +63,15 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 800px) {
+    .Main-title > h2 {
+        width: 50%;
+    }
+    .Box > p {
+        font-size: 16px;
+    }
+    .Circle > h4 {
+        font-size: 16px;
+    }
+}

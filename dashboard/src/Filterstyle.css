@@ -48,14 +48,24 @@
         flex-direction: row;
         width: 100%;
         display: flex;
+        gap: 5px;
     }
-    
-    button {
+    .Filter_title {
+        gap: 5px;
+        margin-right: .5em;
+    }
+    .Filter_button {
         font-size: 12px;
-        width: 100%;
+        width: 10%;
     }
     label {
-        font-size: 12px;
+        font-size: 8px;
         width: 100%;
+    }
+    .Filter_select {
+        width: 100%;
+        height: 2em;
+        border-radius: 3px;
+        font-size: 8px;
     }
 }
