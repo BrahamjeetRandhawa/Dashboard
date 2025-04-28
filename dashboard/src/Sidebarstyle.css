@@ -1,6 +1,6 @@
 .Sidebar {
-    width: 30%;
-    height: 100vh;
+    /* width: 30%;
+    height: 100vh; */
     background-color: royalblue;
     flex-wrap: wrap;
     display: flex;
