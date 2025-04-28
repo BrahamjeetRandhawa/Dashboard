@@ -28,11 +28,6 @@
 } */
 
 
-
-
-
-
-
 .Main-dashboard {
   display: grid;
   grid-template-columns: 26em 1fr;
@@ -43,7 +38,6 @@
 
 .Main-dashboard > .Sidebar {
   grid-row: 1 / span 2;
-  padding: 1rem;
   transition: transform 0.3s ease;
 }
 
