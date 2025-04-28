@@ -3,6 +3,14 @@
     width: 70%;
 }
 
+.Main-style > h2 {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
 .Box {
     display: flex;
     flex-direction: row;

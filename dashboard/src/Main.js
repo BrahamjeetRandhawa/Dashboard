@@ -4,7 +4,6 @@ function Main() {
   return (
     <div className="Main-style">
       <h2>FINANCIALS</h2>
-      <h3>Revenue</h3>
       <div className="Boxes">
         <div className="Box">
           <div className="Circle">

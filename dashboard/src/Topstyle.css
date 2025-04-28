@@ -26,11 +26,14 @@
     justify-content: right;
     align-items: center;
     background-color: lightskyblue;
+    width: 30%;
 }
 
-h1 {
+
+.Topbar-right > h1 {
     font-size: 40px;
     font-weight: lighter;
+    margin-right: .5em;
     color: white;
 }
  
