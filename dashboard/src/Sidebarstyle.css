@@ -1,8 +1,6 @@
 .Sidebar {
     /* width: 30%;
     height: 100vh; */
-    transform: translateX(-100%);
-    animation: slide-in .5s forwards;
     background-color: royalblue;
     flex-wrap: wrap;
     display: flex;
@@ -10,14 +8,6 @@
     align-items: flex-end;
 }
 
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
 ul {
     padding: 0;
@@ -37,8 +27,6 @@ a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    transform: translateX(-100%);
-    animation: slide-in .8s forwards;
 }
 
 @media (max-width: 800px) {

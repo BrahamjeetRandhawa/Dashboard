@@ -1,4 +1,5 @@
 import './App.css';
+import './Animation.css';
 import React from 'react';
 
 import Top from './Top'; // Import the Top component
