@@ -31,11 +31,10 @@ a {
 @media (max-width: 800px) {
     .Sidebar {
         flex-wrap: wrap;
-        width: 30%;
         height: auto;
     }
     a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     ul {

@@ -6,7 +6,7 @@ function Filter() {
         <div className="Filter">
             <div className="Filter_title">
             <label htmlFor="Period">PERIOD</label>
-            <select name="Period" id="Period">
+            <select name="Period" id="Period" className='Filter_select'>
                 <option value="Year">Year</option>
                 <option value="2025">2023</option>
                 <option value="2024">2022</option>
@@ -16,7 +16,7 @@ function Filter() {
             </div> 
             <div className="Filter_title">
             <label htmlFor="Year">YEAR</label>
-            <select name="Year" id="Year">
+            <select name="Year" id="Year" className='Filter_select'>
                 <option value="Year">Year</option>
                 <option value="2024-2025">2024-2025</option>
                 <option value="2023-2024">2023-2024</option>
@@ -27,7 +27,7 @@ function Filter() {
             </div>
             <div className="Filter_title">
             <label htmlFor="Cluster">CLUSTER</label>
-            <select name="Cluster" id="Cluster">
+            <select name="Cluster" id="Cluster" className='Filter_select'>
                 <option value="UKISA">UKISA</option>
                 <option value="GERG">ERGER</option>
                 <option value="RGER">GRE</option>
@@ -37,7 +37,7 @@ function Filter() {
             </div>
             <div className="Filter_title">
             <label htmlFor="Account Name">ACCOUNT NAME</label>
-            <select name="Region" id="Region">
+            <select name="Region" id="Region" className='Filter_select'>
                 <option value="Finastra">Finastra</option>
                 <option value="GER">GER</option>
                 <option value="RGER">RGER</option>
@@ -47,7 +47,7 @@ function Filter() {
             </div>
             <div className="Filter_title">
             <label htmlFor="Location">LOCATION</label>
-            <select name="Region" id="Region">
+            <select name="Region" id="Region" className='Filter_select'>
                 <option value="Onsite">Onsite</option>
                 <option value="Offsite">Offsite</option>
                 <option value="RGER">RGER</option>
