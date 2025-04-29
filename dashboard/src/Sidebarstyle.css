@@ -31,7 +31,6 @@ a {
 @media (max-width: 800px) {
     .Sidebar {
         flex-wrap: wrap;
-        width: 40%;
         height: auto;
     }
     a {
