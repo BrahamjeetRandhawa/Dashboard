@@ -30,7 +30,7 @@
 
 .Main-dashboard {
   display: grid;
-  grid-template-columns: 26em 1fr;
+  grid-template-columns: 30em 1fr;
   grid-template-rows: auto 1fr;
   overflow-x: hidden;
   height: 100vh;
@@ -52,25 +52,39 @@
   overflow-y: auto;
 }
 
-@media (max-width: 800px) {
+
+/* @media */
+
+@media (max-width: 1800px) {
   .Main-dashboard {
     display: grid;
-    grid-template-columns: 12em 1fr;
+    grid-template-columns: 18em 1fr;
     grid-template-rows: auto 1fr;
     overflow-x: hidden;
     width: 100%;
     height: 100vh;
-    
   }
-  .Main-dashboard > .Sidebar {
-    grid-row: 1 / span 2;
-    transition: transform 0.3s ease;
+
+}
+
+@media (max-width: 1100px) {
+  .Main-dashboard {
+    display: grid;
+    grid-template-columns: 14em 1fr;
+    grid-template-rows: auto 1fr;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
   }
-  .Main-dashboard > .Filter {
-    padding: 1rem;
-  }
-  .Main-dashboard > .Main-content {
-    padding: 2rem;
-    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .Main-dashboard {
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    grid-template-rows: auto 1fr;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
   }
 }
