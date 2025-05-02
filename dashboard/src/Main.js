@@ -30,9 +30,6 @@ function Main() {
           <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
           {group.map((item, index) => (
 
-
-
-        
         <div className="Box" key={item.id}>
           <div className="Circle"
           style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
