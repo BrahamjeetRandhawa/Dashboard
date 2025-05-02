@@ -40,7 +40,7 @@ function Main() {
         <h3>Gross Margin $</h3>
 
         {data.map((item, index) => (
-        <div className="Box" key={data.id}>
+        <div className="Box" key={item.id}>
           <div className="Circle"
           style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
         }}>
