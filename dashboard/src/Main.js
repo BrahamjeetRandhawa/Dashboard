@@ -9,19 +9,26 @@ function Main() {
         </div>
       <div className="Boxes">
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
+          {/* Here the number five needs to be percentage text */}
             <h4>26</h4>
           </div>
           <p>Budget</p>
         </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>28</h4>
           </div>
           <p>Actuals</p>
         </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>108</h4>
           </div>
           <p>Achieved percentage</p>
@@ -30,19 +37,25 @@ function Main() {
         <span className="line"></span>
 
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>28</h4>
           </div>
           <p>Budget</p>
         </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>28</h4>
           </div>
           <p>Actuals</p>
         </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>108</h4>
           </div>
           <p>Achieved percentage</p>
@@ -51,19 +64,25 @@ function Main() {
         <span className="line"></span>
 
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>26%</h4>
           </div>
           <p>Budget</p>
           </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>28%</h4>
           </div>
           <p>Actuals</p>
           </div>
         <div className="Box">
-          <div className="Circle">
+          <div className="Circle" style={{
+          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+        }}>
             <h4>108%</h4>
           </div>
           <p>Achieved percentage</p>

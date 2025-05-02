@@ -27,6 +27,8 @@
     align-items: center;
     background-color: royalblue;
     width: 30%;
+    transition-property: all;
+    transition-delay: 1s;
 }
 
 
@@ -42,10 +44,15 @@
     display: flex;
     color: royalblue;
     margin-bottom: 0;
+    font-size: 20px;
+}
+
+.Topbar-left > p {
+    font-size: 14px;
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .Topbar {
         height: 5em;
     }
@@ -56,7 +63,31 @@
         font-size: 16px;
     }
     .Topbar-left > p {
-        font-size: 10px;
+        font-size: 12px;
+    }
+    .Topbar-right {
+        width: 65%;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+    }
+    .Topbar-right > h1 {
+        font-size: 28px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .Topbar {
+        height: 5em;
+    }
+    .Topbar-left {
+        width: 90%;
+    }
+    .Topbar-left > h2 {
+        font-size: 14px;
+    }
+    .Topbar-left > p {
+        font-size: 8px;
     }
     .Topbar-right {
         width: 65%;

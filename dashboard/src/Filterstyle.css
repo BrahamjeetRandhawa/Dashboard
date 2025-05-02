@@ -28,8 +28,8 @@
 }
 
 .Filter_button {
-    width: 100%;
-    height: 33px;
+    width: 10%;
+    height: 3em;
      /* Check if this is correct */
     background-color: royalblue;
     color: white;
@@ -42,8 +42,35 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 1400px) {
+    .Filter {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+    .Filter_title {
+        gap: 5px;
+        margin-right: 0.5em;
+    }
+    .Filter_button {
+        font-size: 12px;
+        width: 15%;
+        height: 2em;
+    }
+    label {
+        font-size: 10px;
+        width: 100%;
+    }
+    .Filter_select {
+        width: 10em;
+        height: 2em;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+}
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .Filter {
         flex-direction: row;
         width: 100%;
@@ -63,7 +90,37 @@
         width: 100%;
     }
     .Filter_select {
+        width: 8em;
+        height: 2em;
+        border-radius: 3px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Filter {
+        flex-direction: row;
         width: 100%;
+        display: flex;
+        gap: 1px;
+    }
+    .Filter_title {
+        gap: 0;
+        margin-right: 0em;
+    }
+    .Filter_button {
+        font-size: 8px;
+        font-weight: 100;
+        width: 15%;
+        height: 2em;
+    }
+    label {
+        font-size: 5px;
+        font-weight: 800;
+        width: 100%;
+    }
+    .Filter_select {
+        width: 6em;
         height: 2em;
         border-radius: 3px;
         font-size: 8px;
