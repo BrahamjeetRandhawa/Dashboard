@@ -23,7 +23,8 @@ function Main() {
         <h3>Revenue</h3>
 
         {data.map((item, index) => (
-        <div className="Box" key={item.id}>
+          <React.Fragment key={item.id}>
+        <div className="Box">
           <div className="Circle"
           style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
         }}>
@@ -31,44 +32,13 @@ function Main() {
           </div>
           <p>{item.label}</p>
         </div>
-        
+
+        {(index + 1) % 3 === 0 && <span className="line"></span>}
+        </React.Fragment>
         ))}
-
-
-        <span className="line"></span>
-
-        <h3>Gross Margin $</h3>
-
-        {data.map((item, index) => (
-        <div className="Box" key={item.id}>
-          <div className="Circle"
-          style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
-          <p>{item.label}</p>
-        </div>
-        ))}
-
-
-        
-        <span className="line"></span>
-
-        <h3>Gross Margin %</h3>
-
-        {data.map((item, index) => (
-        <div className="Box" key={data.id}>
-          <div className="Circle"
-          style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
-        }}>
-            <h4>{item.percentage}%</h4>
-          </div>
-          <p>{item.label}</p>
-          </div>
-        ))}
-
     </div>
   );
 }
+        
 
 export default Main;
