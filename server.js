@@ -3,6 +3,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -12,6 +13,33 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 // Database setup
+
+
+
+
+
+app.use(cors());
+
+const data = [
+    { id: 1, label: 'Budget', percentage: 26},
+    { id: 2, label: 'Actuals', percentage: 42},
+    { id: 3, label: 'Achieved percentage', percentage: 108},
+];
+
+app.get('/api/data', (req, res) => {
+    res.json(data);
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
