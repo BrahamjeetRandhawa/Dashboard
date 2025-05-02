@@ -19,6 +19,8 @@ function Main() {
             <h2>FINANCIALS</h2>
             <p>Source: PP</p>
         </div>
+
+        <h3>Revenue</h3>
       <div className="Boxes">
         {data.map((item, index) => (
         <div className="Box" key={item.id}>
@@ -30,8 +32,12 @@ function Main() {
           <p>{item.label}</p>
         </div>
         ))}
+</div>
 
         <span className="line"></span>
+
+        <h3>Gross Margin $</h3>
+        <div className="Boxes">
 
         <div className="Box">
           <div className="Circle">
@@ -51,8 +57,13 @@ function Main() {
           </div>
           <p>Achieved percentage</p>
         </div>
+
+        </div>
         
         <span className="line"></span>
+
+        <h3>Gross Margin %</h3>
+        <div className="Boxes">
 
         <div className="Box">
           <div className="Circle">
