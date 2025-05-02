@@ -21,15 +21,15 @@ app.set("views", "views");
 app.use(cors());
 
 const data = [
-    { id: 1, label: 'Budget', percentage: 26},
-    { id: 2, label: 'Actuals', percentage: 28},
-    { id: 3, label: 'Achieved percentage', percentage: 108},
-    { id: 4, label: 'Budget', percentage: 28},
-    { id: 5, label: 'Actuals', percentage: 28},
-    { id: 6, label: 'Achieved percentage', percentage: 108},
-    { id: 7, label: 'Budget', percentage: 26},
-    { id: 8, label: 'Actuals', percentage: 28},
-    { id: 9, label: 'Achieved percentage', percentage: 108},
+    { id: 1, label: 'Budget', percentage: 26, title: 'Revenue'},
+    { id: 2, label: 'Actuals', percentage: 28, title: 'Revenue'},
+    { id: 3, label: 'Achieved percentage', percentage: 108, title: 'Revenue'},
+    { id: 4, label: 'Budget', percentage: 28, title: 'Gross Margin $'},
+    { id: 5, label: 'Actuals', percentage: 28, title: 'Gross Margin $'},
+    { id: 6, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin $'},
+    { id: 7, label: 'Budget', percentage: 26, title: 'Gross Margin %'},
+    { id: 8, label: 'Actuals', percentage: 28, title: 'Gross Margin %'},
+    { id: 9, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin %'},
 ];
 
 app.get('/api/data', (req, res) => {

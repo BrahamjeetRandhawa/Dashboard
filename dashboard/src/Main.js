@@ -1,5 +1,5 @@
 import "./Mainstyle.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 
 function Main() {
@@ -13,6 +13,11 @@ function Main() {
   },[]);
 
 
+  const groupedData = [];
+  for (let i = 0; i < data.length; i += 3) {
+    groupedData.push(data.slice(i, i + 3));
+  }
+
   return (
     <div className="Main-style">
         <div className="Main-title">
@@ -20,11 +25,15 @@ function Main() {
             <p>Source: PP</p>
         </div>
 
-        <h3>Revenue</h3>
+        {groupedData.map((group, groupIndex) => (
+        <Fragment key={groupIndex}>
+          <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          {group.map((item, index) => (
 
-        {data.map((item, index) => (
-          <React.Fragment key={item.id}>
-        <div className="Box">
+
+
+        
+        <div className="Box" key={item.id}>
           <div className="Circle"
           style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
         }}>
@@ -33,8 +42,10 @@ function Main() {
           <p>{item.label}</p>
         </div>
 
-        {(index + 1) % 3 === 0 && <span className="line"></span>}
-        </React.Fragment>
+      ))}
+
+        <span className="line"></span>
+        </Fragment>
         ))}
     </div>
   );
