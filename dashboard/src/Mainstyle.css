@@ -1,4 +1,11 @@
-
+.Main-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 
 .Main-title {
     display: flex;
@@ -32,7 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 6em;
+    gap: 1em;
 }
 
 h3 {
@@ -40,11 +47,10 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
+    width: 90%;
     margin: auto;
-    margin-bottom: .5em;
 
-    font-size: 12px;
+
 }
 
 .Circle {
@@ -98,9 +104,9 @@ h3 {
         margin: 0px;
         margin-left: 10px;
     }
-    .Boxes {
-        justify-content: flex-start;
-        gap: 5em;
+    .Main-style {
+        justify-content: center;
+        gap: 8em;
     }
     .Circle > h4 {
         font-size: 24px;

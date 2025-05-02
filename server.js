@@ -22,8 +22,14 @@ app.use(cors());
 
 const data = [
     { id: 1, label: 'Budget', percentage: 26},
-    { id: 2, label: 'Actuals', percentage: 42},
+    { id: 2, label: 'Actuals', percentage: 28},
     { id: 3, label: 'Achieved percentage', percentage: 108},
+    { id: 4, label: 'Budget', percentage: 28},
+    { id: 5, label: 'Actuals', percentage: 28},
+    { id: 6, label: 'Achieved percentage', percentage: 108},
+    { id: 7, label: 'Budget', percentage: 26},
+    { id: 8, label: 'Actuals', percentage: 28},
+    { id: 9, label: 'Achieved percentage', percentage: 108},
 ];
 
 app.get('/api/data', (req, res) => {
