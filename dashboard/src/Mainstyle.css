@@ -59,7 +59,6 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    /* Removed border */
     margin-right: 1em;
 }
 
@@ -107,7 +106,6 @@ h3 {
     .Circle {
         height: 7em;
         width: 7em;
-        /* Removed border */
     }
     .Circle::before {
         top: 15%;
@@ -139,7 +137,6 @@ h3 {
     .Circle {
         height: 6em;
         width: 6em;
-        /* Removed border */
     }
     .Circle::before {
         top: 15%;
@@ -159,7 +156,6 @@ h3 {
     .Circle {
         height: 4em;
         width: 4em;
-        /* Removed border */
     }
     .Circle::before {
         top: 15%;
