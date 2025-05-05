@@ -15,7 +15,7 @@
 
 .Main-dashboard {
   display: grid;
-  grid-template-columns: 30em 1fr;
+  grid-template-columns: 26em 1fr;
   grid-template-rows: auto 1fr;
   overflow-x: hidden;
   height: 100vh;
@@ -63,10 +63,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .Main-dashboard {
     display: grid;
-    grid-template-columns: 10em 1fr;
+    grid-template-columns: 8em 1fr;
     grid-template-rows: auto 1fr;
     overflow-x: hidden;
     width: 100%;
