@@ -49,23 +49,36 @@ h3 {
     align-items: center;
     width: 90%;
     margin: auto;
-
-
 }
 
 .Circle {
+    position: relative;
     height: 10em;
     width: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid black;
+    /* Removed border */
     margin-right: 1em;
+}
+
+.Circle::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .Circle > h4 {
     font-size: 48px;
+    position: relative;
+    z-index: 2;
 }
 
 .Box > p {
@@ -86,7 +99,6 @@ h3 {
         align-items: center;
         width: 98%;
         margin: auto;
-
     }
     .Main-title > h2 {
         font-size: 18px;
@@ -95,7 +107,13 @@ h3 {
     .Circle {
         height: 7em;
         width: 7em;
-        border: 9px solid black;
+        /* Removed border */
+    }
+    .Circle::before {
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
     }
     .Box > p {
         font-size: 18px;
@@ -121,7 +139,13 @@ h3 {
     .Circle {
         height: 6em;
         width: 6em;
-        border: 8px solid black;
+        /* Removed border */
+    }
+    .Circle::before {
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
     }
     .Box > p {
         font-size: 16px;
@@ -135,7 +159,13 @@ h3 {
     .Circle {
         height: 4em;
         width: 4em;
-        border: 6px solid black;
+        /* Removed border */
+    }
+    .Circle::before {
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
     }
     .Circle > h4 {
         font-size: 12px;
