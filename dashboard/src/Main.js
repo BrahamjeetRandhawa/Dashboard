@@ -18,6 +18,8 @@ function Main() {
     groupedData.push(data.slice(i, i + 3));
   }
 
+  const colors = ["#ffff00", "#ff0000", "#0000ff"];
+
   return (
     <div className="Main-style">
         <div className="Main-title">
@@ -25,14 +27,17 @@ function Main() {
             <p>Source: PP</p>
         </div>
 
-        {groupedData.map((group, groupIndex) => (
+        {groupedData.map((group, groupIndex) => {
+          const color = colors[groupIndex % colors.length];
+
+         return (
         <Fragment key={groupIndex}>
           <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
           {group.map((item, index) => (
 
         <div className="Box" key={item.id}>
           <div className="Circle"
-          style={{background: `conic-gradient(#00bfff ${item.percentage * 3.6}deg, #eee 0deg)`,
+          style={{background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)`,
         }}>
             <h4>{item.percentage}</h4>
           </div>
@@ -43,7 +48,8 @@ function Main() {
 
         <span className="line"></span>
         </Fragment>
-        ))}
+        )
+    })}
     </div>
   );
 }
