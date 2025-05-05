@@ -26,14 +26,14 @@ label {
 }
 
 .Filter_select {
-    width: 18em;
+    width: 16em;
     height: 2.5em;
     border-radius: 3px;
     font-size: 13px;
 }
 
 .Filter_button {
-    width: 100%;
+    width: 10%;
     height: 33px;
      /* Check if this is correct */
     background-color: royalblue;
@@ -47,7 +47,7 @@ label {
     flex-wrap: wrap;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1600px) {
     .Filter {
         flex-direction: row;
         width: 100%;
