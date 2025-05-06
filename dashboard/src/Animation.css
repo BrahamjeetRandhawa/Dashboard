@@ -1,4 +1,10 @@
+.Sidebar {
+    animation: slideIn_sidebar 0.3s ease-in-out;
+}
 
+a {
+    animation: slideIn_sidebar 0.7s ease-in-out;
+}
 
 @keyframes slideIn_sidebar {
     0% {
@@ -11,6 +17,53 @@
     }
 }
 
-.Sidebar {
-    animation: slideIn_sidebar 0.3s ease-in-out;
+
+.Topbar {
+    animation: slideIn_topbar 0.7s ease-in-out;
+}
+
+.Topbar-right > h1 {
+    animation: slideIn_topbar 0.8s ease-in-out;
+}
+
+@keyframes slideIn_topbar {
+    0% {
+        transform: translateY(-100%);
+        scale: 1 200%;
+    }
+    100% {
+        transform: translateY(0);
+        scale: 1 100%;
+    }
+}
+
+.Filter {
+    animation: slideIn_filter 0.7s ease-in-out;
+}
+
+@keyframes slideIn_filter {
+    0% {
+        transform: translateY(-150%);
+        scale: 1 200%;
+        background: none;
+    }
+    100% {
+        transform: translateY(0);
+        scale: 1 100%;
+    }
+}
+
+.Circle {
+    animation: circleAnimation 0.7s ease-in-out;
+}
+
+@keyframes circleAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

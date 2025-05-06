@@ -38,7 +38,8 @@ function Main() {
 
         <div className="Box" key={item.id}>
           <div className="Circle"
-          style={{background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)`,
+          style={{
+            background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)`
         }}>
             <h4>{item.percentage}</h4>
           </div>
