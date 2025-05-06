@@ -52,7 +52,27 @@ h3 {
     align-items: center;
     border-radius: 50%;
     margin-right: 1.5em;
+    animation: fillCircle 2s ease forwards;
+    --percentage: 0deg;
+
+    background: conic-gradient(var(--color, #00bfff) var(--percentage, 0deg), #eee 0deg);
 }
+
+
+@keyframes fillCircle {
+    0% {
+        --percentage: 0deg;
+    }
+    50% {
+        --percentage: var(--target-percentage / 2);
+    }
+    100% {
+        --percentage: var(--target-percentage);
+    }
+    }
+
+
+/* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
 
 .Circle::before {
     content: '';
