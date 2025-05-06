@@ -1,0 +1,16 @@
+
+
+@keyframes slideIn_sidebar {
+    0% {
+        transform: translateX(-100%);
+        scale: 200% 1;
+    }
+    100% {
+        transform: translateX(0);
+        scale: 100% 1;
+    }
+}
+
+.Sidebar {
+    animation: slideIn_sidebar 0.3s ease-in-out;
+}
