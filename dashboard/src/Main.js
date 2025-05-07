@@ -18,7 +18,10 @@ function Main() {
     groupedData.push(data.slice(i, i + 3));
   }
 
-  const colors = ["#ffff00", "#ff0000", "#0000ff"];
+  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
+  // above 100% green, Between 95 and 100% amber, Below 95% red
+  
+ 
 
   return (
     <div className="Main-style">
@@ -28,8 +31,11 @@ function Main() {
         </div>
 
         {groupedData.map((group, groupIndex) => {
-          const color = colors[groupIndex % colors.length];
-
+          const color = (percentage) => {
+          if (percentage >= 100) return "#00cc66";
+          if (percentage >= 95) return "#ffcc00";
+          return "#ff0000";
+        };
          return (
         <Fragment key={groupIndex}>
           <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
@@ -37,7 +43,9 @@ function Main() {
 
         <div className="Box" key={item.id}>
           <div className="Circle"
-          style={{background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)`,
+          style={{
+            "--color": color(item.percentage),
+            "--target-percentage": `${item.percentage * 3.6}deg`
         }}>
             <h4>{item.percentage}</h4>
           </div>
