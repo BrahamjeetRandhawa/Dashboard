@@ -1,14 +1,67 @@
 
-
-import React from 'react';
+import "./Mainstyle2.css";
+import React, { useEffect, useState, Fragment } from "react";
+import axios from "axios";
 
 function Main2() {
-    return (
-        <div>
-            <h2>DEMAND</h2>
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/data")
+  .then(res => setData(res.data))
+  .catch(err => console.error(err));
+  },[]);
+
+
+  const groupedData = [];
+  for (let i = 0; i < data.length; i += 3) {
+    groupedData.push(data.slice(i, i + 3));
+  }
+
+  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
+  // above 100% green, Between 95 and 100% amber, Below 95% red
+  
+ 
+
+  return (
+    <div className="Main-style2">
+        <div className="Main-title2">
+            <h2>Demand View</h2>
+            <p>Source: Demand Tracker</p>
         </div>
-    )
+
+        {groupedData.map((group, groupIndex) => {
+          const color = (percentage) => {
+          if (percentage >= 100) return "#00cc66";
+          if (percentage >= 95) return "#ffcc00";
+          return "#ff0000";
+        };
+         return (
+        <Fragment key={groupIndex}>
+          <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          {group.map((item, index) => (
+
+        <div className="Box2" key={item.id}>
+          <div className="Circle2"
+          style={{
+            "--color": color(item.percentage),
+            "--target-percentage": `${item.percentage * 3.6}deg`
+        }}>
+            <h4>{item.percentage}</h4>
+          </div>
+          <p>{item.label}</p>
+        </div>
+
+      ))}
+
+        <span className="line"></span>
+        </Fragment>
+        )
+    })}
+    </div>
+  );
 }
+        
 
 export default Main2;
