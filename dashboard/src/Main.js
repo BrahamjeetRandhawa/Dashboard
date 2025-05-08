@@ -4,18 +4,18 @@ import axios from "axios";
 
 function Main() {
 
-  const [data, setData] = useState([]);
+  const [financials, setFinancials] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/data")
-  .then(res => setData(res.data))
+  .then(res => setFinancials(res.data.financials))
   .catch(err => console.error(err));
   },[]);
 
 
   const groupedData = [];
-  for (let i = 0; i < data.length; i += 3) {
-    groupedData.push(data.slice(i, i + 3));
+  for (let i = 0; i < financials.length; i += 3) {
+    groupedData.push(financials.slice(i, i + 3));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];

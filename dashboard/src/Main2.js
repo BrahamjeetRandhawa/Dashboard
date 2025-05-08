@@ -5,18 +5,18 @@ import axios from "axios";
 
 function Main2() {
 
-  const [data, setData] = useState([]);
+  const [demandView, setDemandView] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/data")
-  .then(res => setData(res.data))
+  .then(res => setDemandView(res.data.demandView))
   .catch(err => console.error(err));
   },[]);
 
 
   const groupedData = [];
-  for (let i = 0; i < data.length; i += 3) {
-    groupedData.push(data.slice(i, i + 3));
+  for (let i = 0; i < demandView.length; i += 3) {
+    groupedData.push(demandView.slice(i, i + 3));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];

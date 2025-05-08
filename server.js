@@ -21,11 +21,19 @@ app.use(cors());
 app.get('/api/data', (req, res) => {
     const filePath = path.join(__dirname, "data", 'dB.xlsx');
     const workbook = xlsx.readFile(filePath);
-    const sheetName = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[sheetName];
 
-    const jsonData = xlsx.utils.sheet_to_json(sheet);
-    res.json(jsonData);
+    // Financials uitlezen
+    const financialSheet = workbook.Sheets['Financials'];
+    const financialData = xlsx.utils.sheet_to_json(financialSheet);
+
+    // Financials uitlezen
+    const demandViewSheet = workbook.Sheets['Demand_view'];
+    const demandViewData = xlsx.utils.sheet_to_json(demandViewSheet);
+
+    res.json({
+        financials: financialData,
+        demandView: demandViewData
+    });
 });
 
 
