@@ -1,13 +1,15 @@
 import './Sidebarstyle.css';
 
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 
 function Sidebar() {
   return (
     <nav className="Sidebar">
       <ul className="Sidebar_menu">
-        <li className="Sidebar__menu-item"><a href="#FINANCIAL">FINANCIAL</a></li>
-        <li className="Sidebar__menu-item"><a href="#DEMAND VIEW">DEMAND VIEW</a></li>
+        <li className="Sidebar__menu-item"><Link to="/">Financial</Link></li>
+        <li className="Sidebar__menu-item"><Link to="/demand">Demand View</Link></li>
         <li className="Sidebar__menu-item"><a href="#FULFILMENT VIEW">FULFILMENT VIEW</a></li>
         <li className="Sidebar__menu-item"><a href="#CLIENT PARTNER FOCUS">CLIENT PARTNER FOCUS</a></li>
         <li className="Sidebar__menu-item"><a href="#THOUGHT LEADERSHIP DEMONSTRATION">THOUGHT LEADERSHIP DEMONSTRATION</a></li>
