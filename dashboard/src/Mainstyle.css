@@ -59,17 +59,6 @@ h3 {
 }
 
 
-/* @keyframes fillCircle {
-    0% {
-        --percentage: 0deg;
-    }
-    50% {
-        --percentage: var(--target-percentage / 2);
-    }
-    100% {
-        --percentage: var(--target-percentage);
-    }
-    } */
 
 @keyframes fillCircle {
     0% {

@@ -15,8 +15,8 @@ function Main2() {
 
 
   const groupedData = [];
-  for (let i = 0; i < demandView.length; i += 3) {
-    groupedData.push(demandView.slice(i, i + 3));
+  for (let i = 0; i < demandView.length; i += 1) {
+    groupedData.push(demandView.slice(i, i + 1));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];
@@ -39,7 +39,7 @@ function Main2() {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          <h3>{group[0]?.title || `${""}`}</h3>
           {group.map((item, index) => (
 
         <div className="Box2" key={item.id}>
@@ -55,7 +55,7 @@ function Main2() {
 
       ))}
 
-        <span className="line"></span>
+        <span className="line2"></span>
         </Fragment>
         )
     })}
