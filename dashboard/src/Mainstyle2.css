@@ -20,39 +20,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1em;
     margin-bottom: 0;
 }
 
 .Main2-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 16px;
-    border: 3px solid #00bfff;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid #00bfff;
 }
 
 
 .Box2 {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 16px;
-    border: 1px solid #00bfff; */
 
 
-    /* flex-direction: row;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 4em;
-    margin-top: 1em;
-    margin-bottom: 1em; */
+    
+
+    padding: 1em;
 }
 
 .Box2-id-1 {
     grid-column: 1;
     grid-row: 1;
-    height: 100%;
 }
 
 .Box2-id-2 {
@@ -72,7 +66,7 @@
 
 
 
-/* .Circle2 {
+.Circle2 {
     position: relative;
     height: 8em;
     width: 8em;
@@ -85,7 +79,7 @@
     --percentage: 0deg;
 
     background: conic-gradient(var(--color, #00bfff) var(--percentage, 0deg), #eee 0deg);
-} */
+}
 
 
 
@@ -101,7 +95,7 @@
 
 /* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
 
-/* .Circle2::before {
+.Circle2::before {
     content: '';
     position: absolute;
     top: 10%;
@@ -111,13 +105,13 @@
     background-color: white;
     border-radius: 50%;
     z-index: 1;
-} */
+}
 
-/* .Circle2 > h4 {
+.Circle2 > h4 {
     font-size: 40px;
     position: relative;
     z-index: 2;
-} */
+}
 
 /* .Box2 > p {
     font-size: 28px;
