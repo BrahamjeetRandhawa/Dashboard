@@ -4,6 +4,8 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const xlsx = require('xlsx');
+const path = require('path');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,27 +16,45 @@ app.set("views", "views");
 
 // Database setup
 
-
-
-
-
 app.use(cors());
 
-const data = [
-    { id: 1, label: 'Budget', percentage: 26, title: 'Revenue'},
-    { id: 2, label: 'Actuals', percentage: 28, title: 'Revenue'},
-    { id: 3, label: 'Achieved percentage', percentage: 108, title: 'Revenue'},
-    { id: 4, label: 'Budget', percentage: 28, title: 'Gross Margin $'},
-    { id: 5, label: 'Actuals', percentage: 28, title: 'Gross Margin $'},
-    { id: 6, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin $'},
-    { id: 7, label: 'Budget', percentage: 26, title: 'Gross Margin %'},
-    { id: 8, label: 'Actuals', percentage: 28, title: 'Gross Margin %'},
-    { id: 9, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin %'},
-];
-
 app.get('/api/data', (req, res) => {
-    res.json(data);
+    const filePath = path.join(__dirname, "data", 'dB.xlsx');
+    const workbook = xlsx.readFile(filePath);
+
+    // Financials uitlezen
+    const financialSheet = workbook.Sheets['Financials'];
+    const financialData = xlsx.utils.sheet_to_json(financialSheet);
+
+    // Financials uitlezen
+    const demandViewSheet = workbook.Sheets['Demand_view'];
+    const demandViewData = xlsx.utils.sheet_to_json(demandViewSheet);
+
+    res.json({
+        financials: financialData,
+        demandView: demandViewData
+    });
 });
+
+
+
+
+
+// const data = [
+//     { id: 1, label: 'Budget', percentage: 26, title: 'Revenue'},
+//     { id: 2, label: 'Actuals', percentage: 28, title: 'Revenue'},
+//     { id: 3, label: 'Achieved percentage', percentage: 108, title: 'Revenue'},
+//     { id: 4, label: 'Budget', percentage: 28, title: 'Gross Margin $'},
+//     { id: 5, label: 'Actuals', percentage: 28, title: 'Gross Margin $'},
+//     { id: 6, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin $'},
+//     { id: 7, label: 'Budget', percentage: 26, title: 'Gross Margin %'},
+//     { id: 8, label: 'Actuals', percentage: 28, title: 'Gross Margin %'},
+//     { id: 9, label: 'Achieved percentage', percentage: 108, title: 'Gross Margin %'},
+// ];
+
+// app.get('/api/data', (req, res) => {
+//     res.json(data);
+// });
 
 
 

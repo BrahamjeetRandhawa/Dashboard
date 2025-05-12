@@ -1,21 +1,22 @@
-import "./Mainstyle.css";
+
+import "./Mainstyle2.css";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 
-function Main() {
+function Main2() {
 
-  const [financials, setFinancials] = useState([]);
+  const [demandView, setDemandView] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/data")
-  .then(res => setFinancials(res.data.financials))
+  .then(res => setDemandView(res.data.demandView))
   .catch(err => console.error(err));
   },[]);
 
 
   const groupedData = [];
-  for (let i = 0; i < financials.length; i += 3) {
-    groupedData.push(financials.slice(i, i + 3));
+  for (let i = 0; i < demandView.length; i += 1) {
+    groupedData.push(demandView.slice(i, i + 1));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];
@@ -24,10 +25,10 @@ function Main() {
  
 
   return (
-    <div className="Main-style">
-        <div className="Main-title">
-            <h2>FINANCIALS</h2>
-            <p>Source: PP</p>
+    <div className="Main-style2">
+        <div className="Main-title2">
+            <h2>Demand View</h2>
+            <p>Source: Demand Tracker</p>
         </div>
 
         {groupedData.map((group, groupIndex) => {
@@ -38,11 +39,11 @@ function Main() {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          <h3>{group[0]?.title || `${""}`}</h3>
           {group.map((item, index) => (
 
-        <div className="Box" key={item.id}>
-          <div className="Circle"
+        <div className="Box2" key={item.id}>
+          <div className="Circle2"
           style={{
             "--color": color(item.percentage),
             "--target-percentage": `${item.percentage * 3.6}deg`
@@ -54,7 +55,7 @@ function Main() {
 
       ))}
 
-        <span className="line"></span>
+        <span className="line2"></span>
         </Fragment>
         )
     })}
@@ -63,4 +64,4 @@ function Main() {
 }
         
 
-export default Main;
+export default Main2;
