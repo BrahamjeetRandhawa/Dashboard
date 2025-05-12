@@ -39,10 +39,12 @@ function Main2() {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3>{group[0]?.title || `${""}`}</h3>
+          <div className="Main2-grid">
+          
           {group.map((item, index) => (
 
         <div className={`Box2 Box2-id-${item.id}`} key={item.id}>
+          <h3>{group[0]?.title || `${""}`}</h3>
           <div className="Circle2"
           style={{
             "--color": color(item.percentage),
@@ -56,6 +58,7 @@ function Main2() {
       ))}
 
         <span className="line2"></span>
+        </div>
         </Fragment>
         )
     })}
