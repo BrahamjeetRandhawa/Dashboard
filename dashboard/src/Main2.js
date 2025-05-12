@@ -39,7 +39,7 @@ function Main2() {
          return (
           
         <div className={`Box2 Box2-id-${item.id}`} key={item.id}>
-          <h3>{item.title}</h3>
+          
           <div className="Circle2"
           style={{
             "--color": color(item.percentage),
@@ -47,7 +47,10 @@ function Main2() {
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <p>{item.label}</p>
+          <div className="Text-container2">
+          <h3 className="Main2-h3">{item.title}</h3>
+          <p className="Label2">{item.label}</p>
+          </div>
         </div>
 
       );
