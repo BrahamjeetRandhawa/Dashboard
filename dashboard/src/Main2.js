@@ -42,7 +42,7 @@ function Main2() {
           <h3>{group[0]?.title || `${""}`}</h3>
           {group.map((item, index) => (
 
-        <div className="Box2" key={item.id}>
+        <div className={`Box2 Box2-id-${item.id}`} key={item.id}>
           <div className="Circle2"
           style={{
             "--color": color(item.percentage),
