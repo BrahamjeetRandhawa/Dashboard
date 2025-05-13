@@ -114,7 +114,8 @@
     .Main-style {
         width: 100%;
         height: 100%;
-        
+        justify-content: space-around;
+        gap: 2em;
     }
     .Main-title {
         display: flex;
@@ -144,10 +145,6 @@
         margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
-    }
-    .Main-style {
-        justify-content: space-around;
-        gap: 2em;
     }
 }
 
