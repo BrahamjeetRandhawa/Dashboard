@@ -24,7 +24,7 @@ function Main2() {
   return (
     <div className="Main-style2">
         <div className="Main-title2">
-            <h2>Demand View</h2>
+            <h2>Demand View <span className="dynamicHeading">{demandView[0]?.heading}</span></h2>
             <p>Source: Demand Tracker</p>
         </div>
 

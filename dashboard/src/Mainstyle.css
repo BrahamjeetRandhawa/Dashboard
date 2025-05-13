@@ -16,6 +16,11 @@
     margin: auto;
 }
 
+.dynamicHeading {
+    color: lightseagreen;
+    margin-left: 1em;
+}
+
 .Main-title > h2 {
     display: flex;
     justify-content: center;
@@ -182,6 +187,16 @@
         overflow-x: hidden;
         overflow-y: hidden;
     }
+
+    .Main-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
     .Box {
         margin: 0em;
         margin-top: 1em;

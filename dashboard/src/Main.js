@@ -26,7 +26,7 @@ function Main() {
   return (
     <div className="Main-style">
         <div className="Main-title">
-            <h2>FINANCIALS</h2>
+            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
             <p>Source: PP</p>
         </div>
 
