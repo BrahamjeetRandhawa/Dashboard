@@ -26,7 +26,7 @@ function Main() {
   return (
     <div className="Main-style">
         <div className="Main-title">
-            <h2>FINANCIALS</h2>
+            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
             <p>Source: PP</p>
         </div>
 
@@ -38,7 +38,7 @@ function Main() {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3>{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          <h3 className="Main-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
           {group.map((item, index) => (
 
         <div className="Box" key={item.id}>
@@ -49,7 +49,7 @@ function Main() {
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <p>{item.label}</p>
+          <p className="Label">{item.label}</p>
         </div>
 
       ))}
