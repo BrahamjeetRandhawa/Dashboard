@@ -1,18 +1,23 @@
 import './Sidebarstyle.css';
 
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import React, { useState } from 'react'; // Import React and useState
+
 
 
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <nav className="Sidebar">
-      <div className='Menu'>
+      
         <input type="checkbox" id="menu-toggle" />
+      <label htmlFor="Menu" className='Menu' onClick={() => setIsOpen (!isOpen)}>
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </label>
       <ul className="Sidebar_menu">
         <li className="Sidebar__menu-item"><Link to="/">Financial</Link></li>
         <li className="Sidebar__menu-item"><Link to="/demand">Demand View</Link></li>

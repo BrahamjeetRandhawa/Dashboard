@@ -35,6 +35,11 @@ a {
         display: none;
     }
 
+    .Menu {
+        transform: translateX(-100%);
+        padding: 2em;
+    }
+
     #menu-toggle {
         display: none;
     }
@@ -49,22 +54,27 @@ a {
     }
 
     .Menu {
+        position: relative;
         transform: translateX(100%);
         padding: 2em;
+        cursor: pointer;
     }
 
     .Menu > span {
         border: 2px solid black;
         margin: 5px;
-        width: 2em;
+        width: 3.5em;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 
     #menu-toggle {
         position: absolute;
+        top: 0;
+        left: 0;
         cursor: pointer;
         opacity: 0;
         width: 40px;
@@ -73,25 +83,17 @@ a {
 
         -webkite-touch-callout: none;
     }
+    
 
-    @keyframes menuAnimation {
-        0% {
-            transform: translateX(-100%);
-            scale: 200% 1;
-        }
-        100% {
-            transform: translateX(0);
-            scale: 100% 1;
-        }
-        
+    #menu-toggle:checked ~ .Sidebar {
+        transform: translateX(100%);
     }
+
+
+
+    
     a {
         font-size: 16px;
-    }
-
-    ul {
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -112,10 +114,5 @@ a {
     }
     a {
         font-size: 12px;
-    }
-
-    ul {
-        justify-content: center;
-        align-items: center;
     }
 }
