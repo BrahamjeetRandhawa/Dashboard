@@ -7,12 +7,13 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 function Sidebar() {
   return (
     <nav className="Sidebar">
-      <div className='Menu'>
+      
         <input type="checkbox" id="menu-toggle" />
+      <label className='Menu' htmlFor='menu-toggle'>  
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </label>
       <ul className="Sidebar_menu">
         <li className="Sidebar__menu-item"><Link to="/">Financial</Link></li>
         <li className="Sidebar__menu-item"><Link to="/demand">Demand View</Link></li>
