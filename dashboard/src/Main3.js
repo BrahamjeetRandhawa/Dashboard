@@ -22,8 +22,8 @@ function Main3() {
  
 
   return (
-    <div className="Main-style2">
-        <div className="Main-title2">
+    <div className="Main-style3">
+        <div className="Main-title3">
             <h2>Fulfilment View <span className="dynamicHeading">{fulfilmentView[0]?.heading}</span></h2>
             <p>Source: Demand Tracker</p>
         </div>
@@ -38,9 +38,9 @@ function Main3() {
 
          return (
           
-        <div className={`Box2 Box2-id-${item.id}`} key={item.id}>
+        <div className={`Box3 Box3-id-${item.id}`} key={item.id}>
           
-          <div className="Circle2"
+          <div className="Circle3"
           style={{
             "--color": color(item.percentage),
             "--target-percentage": `${item.percentage * 3.6}deg`
@@ -48,8 +48,8 @@ function Main3() {
             <h4>{item.percentage}</h4>
           </div>
           <div className="Text-container2">
-          <h3 className="Main2-h3">{item.title}</h3>
-          <p className="Label2">{item.label}</p>
+          <h3 className="Main3-h3">{item.title}</h3>
+          <p className="Label3">{item.label}</p>
           </div>
         </div>
 
