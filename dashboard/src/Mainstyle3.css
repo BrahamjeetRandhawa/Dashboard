@@ -37,6 +37,7 @@
 .Box3-id-1 {
     grid-column: 1;
     grid-row: 1;
+    border-bottom: 1px solid black;
 }
 
 .Box3-id-2 {
