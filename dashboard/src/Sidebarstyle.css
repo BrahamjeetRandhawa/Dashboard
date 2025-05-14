@@ -85,8 +85,12 @@ a {
     }
     
 
-    #menu-toggle:checked ~ .Sidebar {
+    /* #menu-toggle:checked ~ .Sidebar {
         transform: translateX(100%);
+    } */
+
+    .Sidebar.open {
+        transform: translateX(0);
     }
 
 
