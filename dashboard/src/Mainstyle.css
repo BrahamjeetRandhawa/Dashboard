@@ -242,18 +242,21 @@
 
     .Main-title {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 95%;
         margin: auto;
     }
 
     .Main-title > h2 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
         flex-direction: column;
         align-items: flex-start;
+    }
+    .Main-title > p {
+        font-size: 14px;
     }
     .dynamicHeading {
         margin-left: 0em;
@@ -263,6 +266,7 @@
         margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
+        flex-direction: column;
     }
     .Label {
         font-size: 18px;
