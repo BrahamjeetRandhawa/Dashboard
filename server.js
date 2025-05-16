@@ -26,13 +26,18 @@ app.get('/api/data', (req, res) => {
     const financialSheet = workbook.Sheets['Financials'];
     const financialData = xlsx.utils.sheet_to_json(financialSheet);
 
-    // Financials uitlezen
+    // Demand View uitlezen
     const demandViewSheet = workbook.Sheets['Demand_view'];
     const demandViewData = xlsx.utils.sheet_to_json(demandViewSheet);
 
+    // Fullfillment uitlezen
+    const fulfilmentViewSheet = workbook.Sheets['Fulfilment_view'];
+    const fulfilmentViewData = xlsx.utils.sheet_to_json(fulfilmentViewSheet);
+
     res.json({
         financials: financialData,
-        demandView: demandViewData
+        demandView: demandViewData,
+        fulfilmentView: fulfilmentViewData
     });
 });
 

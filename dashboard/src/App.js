@@ -10,6 +10,7 @@ import Filter from './Filter'; // Import the Filter component
 
 import Main from './Main'; // Import the Main component
 import Main2 from './Main2'; // Import the Main2 component
+import Main3 from './Main3'; // Import the Main3 component
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Main />} /> {/* Default route */}
               <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
+              <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
             </Routes>
           </div>
         </div>
