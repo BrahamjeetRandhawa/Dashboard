@@ -48,18 +48,25 @@
 }
 
 .Box3-id-3 {
+    grid-column: 1;
+    grid-row: span 2;
+}
+
+.Box3-id-4 {
     grid-column: 2;
     grid-row: 2;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }
 
-.Box3-id-4 {
+.Box3-id-5 {
     grid-column: 2;
     grid-row: 3;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }
+
+
 
 
 

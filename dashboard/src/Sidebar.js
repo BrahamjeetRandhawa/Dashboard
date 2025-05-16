@@ -8,8 +8,8 @@ function Sidebar() {
   return (
     <nav className="Sidebar">
       <ul className="Sidebar_menu">
-        <li className="Sidebar__menu-item"><Link to="/">Financial</Link></li>
-        <li className="Sidebar__menu-item"><Link to="/demand">Demand View</Link></li>
+        <li className="Sidebar__menu-item"><Link to="/">FINANCIALS</Link></li>
+        <li className="Sidebar__menu-item"><Link to="/demand">DEMAND VIEW</Link></li>
         <li className="Sidebar__menu-item"><Link to ="/fulfilment">FULFILMENT VIEW</Link></li>
         <li className="Sidebar__menu-item"><a href="#CLIENT PARTNER FOCUS">CLIENT PARTNER FOCUS</a></li>
         <li className="Sidebar__menu-item"><a href="#THOUGHT LEADERSHIP DEMONSTRATION">THOUGHT LEADERSHIP DEMONSTRATION</a></li>
