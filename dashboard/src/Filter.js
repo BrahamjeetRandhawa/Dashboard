@@ -17,7 +17,6 @@ function Filter({ filters, setFilters, options }) {
             <div key={key} className="Filter_title">
             <label htmlFor={key}>{key.toUpperCase()}</label>
             <select name={key} id={key} className='Filter_select' value={filters[key]} onChange={handleChange}>
-                <option value=""></option>
                 {options[key].map((val) => (
                     <option key={val} value={val}>
                         {val}

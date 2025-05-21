@@ -18,11 +18,11 @@ function App() {
   const [financials, setFinancials] = useState([]);
   
     const [filters, setFilters] = useState({
-      PERIOD: "",
-      YEAR: "",
-      CLUSTER: "",
-      "ACCOUNT NAME": "",
-      LOCATION: "",
+      PERIOD: "2020",
+      YEAR: "2020-2021",
+      CLUSTER: "UKISA",
+      "ACCOUNT NAME": "Finastra",
+      LOCATION: "Onsite",
     });
   
     const [options, setOptions] = useState({
