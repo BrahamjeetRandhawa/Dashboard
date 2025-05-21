@@ -7,7 +7,7 @@ function Main() {
   const [financials, setFinancials] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/data")
+    axios.get("http://localhost:5500/api/data")
   .then(res => setFinancials(res.data.financials))
   .catch(err => console.error(err));
   },[]);

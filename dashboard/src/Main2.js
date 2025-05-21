@@ -8,7 +8,7 @@ function Main2() {
   const [demandView, setDemandView] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/data")
+    axios.get("http://localhost:5500/api/data")
   .then(res => setDemandView(res.data.demandView))
   .catch(err => console.error(err));
   },[]);

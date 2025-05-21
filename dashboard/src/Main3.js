@@ -8,7 +8,7 @@ function Main3() {
   const [fulfilmentView, setFulfilmentView] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/data")
+    axios.get("http://localhost:5500/api/data")
   .then(res => setFulfilmentView(res.data.fulfilmentView))
   .catch(err => console.error(err));
   },[]);
