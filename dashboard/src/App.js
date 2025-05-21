@@ -51,8 +51,12 @@ function App() {
     .catch(err => console.error(err));
     },[]);
   
-    const filteredFinancials = financials.filter((item) => 
-    Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
+    // const filteredFinancials = financials.filter((item) => 
+    // Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
+
+    const noFiltersSelected = Object.values(filters).every(val => val === "");
+
+    const filteredFinancials =noFiltersSelected ? financials.slice(0, 9) : financials.filter((item) => Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim())); 
   
   return (
       <div className="App-body">
