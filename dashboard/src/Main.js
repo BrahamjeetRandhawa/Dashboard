@@ -25,7 +25,7 @@ function Main() {
   });
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/data")
+    axios.get("http://localhost:5500/api/data")
   .then(res => {
     const data = res.data.financials;
     setFinancials(data);
