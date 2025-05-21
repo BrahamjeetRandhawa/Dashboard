@@ -4,46 +4,7 @@ import React, { Fragment } from "react";
 
 function Main({ financials }) {
 
-  // const [financials, setFinancials] = useState([]);
-
-  // const [filters, setFilters] = useState({
-  //   PERIOD: "",
-  //   YEAR: "",
-  //   CLUSTER: "",
-  //   "ACCOUNT NAME": "",
-  //   LOCATION: "",
-  // });
-
-  // const [options, setOptions] = useState({
-  //   PERIOD: [],
-  //   YEAR: [],
-  //   CLUSTER: [],
-  //   "ACCOUNT NAME": [],
-  //   LOCATION: [],
-  // });
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:5500/api/data")
-  // .then(res => {
-  //   const data = res.data.financials;
-  //   setFinancials(data);
-
-  //   const newOptions = {
-  //     PERIOD: [...new Set(data.map((d) => d.PERIOD).filter(val => val && val !== "PERIOD"))],
-  //     YEAR: [...new Set(data.map((d) => d.YEAR).filter(val => val && val !== "YEAR"))],
-  //     CLUSTER: [...new Set(data.map((d) => d.CLUSTER).filter(val => val && val !== "CLUSTER"))],
-  //     "ACCOUNT NAME": [...new Set(data.map((d) => d["ACCOUNT NAME"]).filter(val => val && val !== "ACCOUNT NAME"))],
-  //     LOCATION: [...new Set(data.map((d) => d.LOCATION).filter(val => val && val !== "LOCATION"))],
-  //   };
-  //   setOptions(newOptions);
-  // })
-  // .catch(err => console.error(err));
-  // },[]);
-
-  // const filteredFinancials = financials.filter((item) => 
-  // Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
-
-
+ 
   const groupedData = [];
   for (let i = 0; i < financials.length; i += 3) {
     groupedData.push(financials.slice(i, i + 3));
