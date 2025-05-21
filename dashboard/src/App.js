@@ -1,8 +1,9 @@
 import './App.css';
 import './Animation.css';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import axios from 'axios'; // Import axios for making HTTP requests
 
 import Top from './Top'; // Import the Top component
 import Sidebar from './Sidebar'; // Import the Sidebar component
@@ -13,6 +14,45 @@ import Main2 from './Main2'; // Import the Main2 component
 import Main3 from './Main3'; // Import the Main3 component
 
 function App() {
+
+  const [financials, setFinancials] = useState([]);
+  
+    const [filters, setFilters] = useState({
+      PERIOD: "",
+      YEAR: "",
+      CLUSTER: "",
+      "ACCOUNT NAME": "",
+      LOCATION: "",
+    });
+  
+    const [options, setOptions] = useState({
+      PERIOD: [],
+      YEAR: [],
+      CLUSTER: [],
+      "ACCOUNT NAME": [],
+      LOCATION: [],
+    });
+  
+    useEffect(() => {
+      axios.get("http://localhost:5500/api/data")
+    .then(res => {
+      const data = res.data.financials;
+      setFinancials(data);
+  
+      const newOptions = {
+        PERIOD: [...new Set(data.map((d) => d.PERIOD).filter(val => val && val !== "PERIOD"))],
+        YEAR: [...new Set(data.map((d) => d.YEAR).filter(val => val && val !== "YEAR"))],
+        CLUSTER: [...new Set(data.map((d) => d.CLUSTER).filter(val => val && val !== "CLUSTER"))],
+        "ACCOUNT NAME": [...new Set(data.map((d) => d["ACCOUNT NAME"]).filter(val => val && val !== "ACCOUNT NAME"))],
+        LOCATION: [...new Set(data.map((d) => d.LOCATION).filter(val => val && val !== "LOCATION"))],
+      };
+      setOptions(newOptions);
+    })
+    .catch(err => console.error(err));
+    },[]);
+  
+    const filteredFinancials = financials.filter((item) => 
+    Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
   
   return (
       <div className="App-body">
@@ -21,12 +61,15 @@ function App() {
         </header>
         <main className="Main">
         <div className="Main-dashboard">
-          <Filter className="Filter" />
+          <Filter className="Filter" 
+          filters={filters}
+          setFilters={setFilters}
+          options={options}/>
           <Sidebar className="Sidebar" />
 
           <div className="Main-content">
             <Routes>
-              <Route path="/" element={<Main />} /> {/* Default route */}
+              <Route path="/" element={<Main financials={filteredFinancials} />} /> {/* Default route */}
               <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
               <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
             </Routes>

@@ -12,7 +12,7 @@ function Filter({ filters, setFilters, options }) {
 
     if (!options) return null;
     return (
-        <div className="Filter">
+        <div className="Filters">
             {Object.keys(options).map((key) => (
             <div key={key} className="Filter_title">
             <label htmlFor={key}>{key.toUpperCase()}</label>
