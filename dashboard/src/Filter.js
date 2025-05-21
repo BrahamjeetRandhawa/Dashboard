@@ -1,13 +1,17 @@
 import './Filterstyle.css';
 
 
-function Filter({ filters, setFilters, options }) {
+function Filter({ filters, setFilters, options, onFilterApply }) {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFilters((prev) => ({
             ...prev,
             [name]: value,
         }));
+    };
+    
+    const handleApply = () => {
+        onFilterApply(filters);
     };
 
     if (!options) return null;
@@ -16,7 +20,7 @@ function Filter({ filters, setFilters, options }) {
             {Object.keys(options).map((key) => (
             <div key={key} className="Filter_title">
             <label htmlFor={key}>{key.toUpperCase()}</label>
-            <select name={key} id={key} className='Filter_select' value={filters[key]} onChange={handleChange}>
+            <select name={key} id={key} className='Filter_select' value={filters[key] || ''} onChange={handleChange}>
                 {options[key].map((val) => (
                     <option key={val} value={val}>
                         {val}
@@ -25,7 +29,7 @@ function Filter({ filters, setFilters, options }) {
             </select>
             </div>
             ))}
-            <button className="Filter_button">Filter</button>
+            <button className="Filter_button" onClick={handleApply}>Filter</button>
 
             </div>
     );

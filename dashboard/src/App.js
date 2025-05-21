@@ -16,6 +16,7 @@ import Main3 from './Main3'; // Import the Main3 component
 function App() {
 
   const [financials, setFinancials] = useState([]);
+  const [filteredFinancials, setFilteredFinancials] = useState([]);
   
     const [filters, setFilters] = useState({
       PERIOD: "2020",
@@ -38,6 +39,7 @@ function App() {
     .then(res => {
       const data = res.data.financials;
       setFinancials(data);
+      setFilteredFinancials(data.slice(0, 9));
   
       const newOptions = {
         PERIOD: [...new Set(data.map((d) => d.PERIOD).filter(val => val && val !== "PERIOD"))],
@@ -54,9 +56,24 @@ function App() {
     // const filteredFinancials = financials.filter((item) => 
     // Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
 
-    const noFiltersSelected = Object.values(filters).every(val => val === "");
+    const applyFilters = () => {
+      const noFiltersSelected = Object.values(filters).every(val => !val);
 
-    const filteredFinancials =noFiltersSelected ? financials.slice(0, 9) : financials.filter((item) => Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim())); 
+      if (noFiltersSelected) {
+        setFilteredFinancials(financials.slice(0, 9));
+      } else {
+        const filtered = financials.filter(item =>
+          Object.entries(filters).every(([key, val]) =>
+          !val || String(item[key]).trim() === String(val).trim()
+      )
+        );
+        setFilteredFinancials(filtered);
+      }
+    };
+
+    // const noFiltersSelected = Object.values(filters).every(val => val);
+
+    // const filteredFinancials =noFiltersSelected ? financials.slice(0, 9) : financials.filter((item) => Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim())); 
   
   return (
       <div className="App-body">
@@ -68,7 +85,8 @@ function App() {
           <Filter className="Filter" 
           filters={filters}
           setFilters={setFilters}
-          options={options}/>
+          options={options}
+          onFilterApply={applyFilters}/>
           <Sidebar className="Sidebar" />
 
           <div className="Main-content">
