@@ -9,6 +9,8 @@ function Filter({ filters, setFilters, options }) {
             [name]: value,
         }));
     };
+
+    if (!options) return null;
     return (
         <div className="Filter">
             {Object.keys(options).map((key) => (
@@ -24,6 +26,8 @@ function Filter({ filters, setFilters, options }) {
             </select>
             </div>
             ))}
+            <button className="Filter_button">Filter</button>
+
             </div>
     );
 }

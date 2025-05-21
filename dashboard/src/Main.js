@@ -31,11 +31,11 @@ function Main() {
     setFinancials(data);
 
     const newOptions = {
-      PERIOD: [...new Set(data.map((d) => d.period))],
-      YEAR: [...new Set(data.map((d) => d.year))],
-      CLUSTER: [...new Set(data.map((d) => d.cluster))],
-      "ACCOUNT NAME": [...new Set(data.map((d) => d["ACCOUNT NAME"]))],
-      LOCATION: [...new Set(data.map((d) => d.location))],
+      PERIOD: [...new Set(data.map((d) => d.PERIOD).filter(val => val && val !== "PERIOD"))],
+      YEAR: [...new Set(data.map((d) => d.YEAR).filter(val => val && val !== "YEAR"))],
+      CLUSTER: [...new Set(data.map((d) => d.CLUSTER).filter(val => val && val !== "CLUSTER"))],
+      "ACCOUNT NAME": [...new Set(data.map((d) => d["ACCOUNT NAME"]).filter(val => val && val !== "ACCOUNT NAME"))],
+      LOCATION: [...new Set(data.map((d) => d.LOCATION).filter(val => val && val !== "LOCATION"))],
     };
     setOptions(newOptions);
   })
@@ -60,7 +60,7 @@ function Main() {
     <div className="Main-style">
       <Filter filters={filters} setFilters={setFilters} options={options} />
         <div className="Main-title">
-            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
+            <h2>FINANCIALS <span className="dynamicHeading">{filteredFinancials[0]?.heading}</span></h2>
             <p>Source: PP</p>
         </div>
 
