@@ -12,7 +12,7 @@ function Sidebar() {
         <li className="Sidebar__menu-item"><Link to="/demand">DEMAND VIEW</Link></li>
         <li className="Sidebar__menu-item"><Link to ="/fulfilment">FULFILMENT VIEW</Link></li>
         <li className="Sidebar__menu-item"><a href="#CLIENT PARTNER FOCUS">CLIENT PARTNER FOCUS</a></li>
-        <li className="Sidebar__menu-item"><a href="#THOUGHT LEADERSHIP DEMONSTRATION">THOUGHT LEADERSHIP DEMONSTRATION</a></li>
+        <li className="Sidebar__menu-item"><Link to ="/thought_Leadership">THOUGHT LEADERSHIP DEMONSTRATION</Link></li>
         <li className="Sidebar__menu-item"><a href="#NORTH STAR POD">NORTH STAR POD</a></li>
         <li className="Sidebar__menu-item"><a href="#GTM IMPROVEMENT FOCUS">GTM IMPROVEMENT FOCUS</a></li>
         <li className="Sidebar__menu-item"><a href="#OPERATIONS-CUSTOMER SPECIFIC">OPERATIONS-CUSTOMER SPECIFIC</a></li>

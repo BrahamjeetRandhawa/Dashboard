@@ -13,6 +13,8 @@ import Main from './Main'; // Import the Main component
 import Main2 from './Main2'; // Import the Main2 component
 import Main3 from './Main3'; // Import the Main3 component
 
+import Main5 from './Main5'; // Import the Main5 component
+
 function App() {
 
   const [financials, setFinancials] = useState([]);
@@ -94,6 +96,8 @@ function App() {
               <Route path="/" element={<Main financials={filteredFinancials} />} /> {/* Default route */}
               <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
               <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
+
+              <Route path="/thought_Leadership" element={<Main5 />} />
             </Routes>
           </div>
         </div>
