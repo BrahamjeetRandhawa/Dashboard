@@ -1,9 +1,9 @@
-.Filter {
+.Filters {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    /* padding: 20px; */
+    padding: 20px;
     background-color: #f0f0f0;
     /* height: 30%;  
     width: 100%;  */
@@ -21,15 +21,20 @@
     flex-direction: column;
 }
 
+label {
+    font-size: 16px;
+}
+
 .Filter_select {
-    width: 15em;
-    height: 3em;
+    width: 16em;
+    height: 2.5em;
     border-radius: 3px;
+    font-size: 13px;
 }
 
 .Filter_button {
     width: 10%;
-    height: 3em;
+    height: 33px;
      /* Check if this is correct */
     background-color: royalblue;
     color: white;
@@ -42,33 +47,62 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .Filter {
         flex-direction: row;
         width: 100%;
-        height: auto;
-        padding: 1em;
+        display: flex;
+        gap: 5px;
     }
     .Filter_title {
         gap: 5px;
-        margin-right: 0.5em;
+        margin-right: .5em;
     }
     .Filter_button {
         font-size: 12px;
-        width: 15%;
-        height: 2em;
+        width: 20%;
+    }
+
+    /* .Filter_button:active {
+        border: 3px solid red;
+        transition: 0.1s ease-in-out;
+    } */
+    
+    .Filter_select {
+        width: 15em;
+        height: 3em;
+        border-radius: 3px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .Filter {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        gap: 5px;
+    }
+    .Filter_title {
+        gap: 5px;
+        margin-right: .5em;
+    }
+    .Filter_button {
+        font-size: 14px;
+        width: 20%;
     }
     label {
-        font-size: 10px;
+        font-size: 14px;
         width: 100%;
     }
     .Filter_select {
-        width: 10em;
+        width: 9em;
         height: 2em;
         border-radius: 3px;
-        font-size: 10px;
+        font-size: 13px;
     }
 }
+
 
 @media (max-width: 1000px) {
     .Filter {
@@ -83,46 +117,47 @@
     }
     .Filter_button {
         font-size: 12px;
-        width: 10%;
+        width: 20%;
     }
     label {
         font-size: 8px;
+        font-weight: 600;
         width: 100%;
     }
     .Filter_select {
-        width: 8em;
+        width: 5.5em;
         height: 2em;
         border-radius: 3px;
-        font-size: 8px;
+        font-size: 12px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .Filter {
         flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
         display: flex;
-        gap: 1px;
+        gap: 5px;
     }
     .Filter_title {
-        gap: 0;
-        margin-right: 0em;
+        gap: 5px;
+        margin-right: .5em;
     }
     .Filter_button {
-        font-size: 8px;
-        font-weight: 100;
-        width: 15%;
-        height: 2em;
+        font-size: 10px;
+        width: 27%;
+        height: 24px;
     }
     label {
-        font-size: 5px;
-        font-weight: 800;
+        font-size: 7px;
+        font-weight: 600;
         width: 100%;
     }
     .Filter_select {
-        width: 6em;
+        width: 5em;
         height: 2em;
         border-radius: 3px;
-        font-size: 8px;
+        font-size: 12px;
     }
 }

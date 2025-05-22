@@ -1,62 +1,71 @@
-.Main-style {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.Main-style2 {
     flex-wrap: wrap;
-    gap: 1em;
 }
 
-.Main-title {
+.Main-title2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 98%;
     margin: auto;
 }
 
-.dynamicHeading {
-    color: lightseagreen;
-    margin-left: .5em;
-}
-
-.Main-title > h2 {
-    font-size: 24px;
-    font-weight: 600;
+.Main-title2 > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
 }
 
-.Main-title > p {
-    font-size: 14px;
+.Main2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
 }
 
-.Box {
+
+.Box2 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin: 4em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    
+    padding: 3em;
 }
 
-.Main-h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin: auto;
+.Box2-id-1 {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.Circle {
+.Box2-id-2 {
+    grid-column: 2;
+    grid-row: 1;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.Box2-id-3 {
+    grid-column: 2;
+    grid-row: 2;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.Box2-id-4 {
+    grid-column: 2;
+    grid-row: 3;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+
+.Circle2 {
     position: relative;
-    height: 8em;
-    width: 8em;
+    height: 9em;
+    width: 9em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,19 +79,7 @@
 
 
 
-@keyframes fillCircle {
-    0% {
-        background: conic-gradient(var(--color, #00bfff) 0deg, #eee 0deg);
-    }
-
-    100% {
-        background: conic-gradient(var(--color, #00bfff) var(--target-percentage, 0deg), #eee 0deg);
-    }
-}
-
-/* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
-
-.Circle::before {
+.Circle2::before {
     content: '';
     position: absolute;
     top: 10%;
@@ -94,30 +91,54 @@
     z-index: 1;
 }
 
-.Circle > h4 {
+.Circle2 > h4 {
     font-size: 40px;
     position: relative;
     z-index: 2;
 }
 
-.Label {
-    font-size: 28px;
+
+
+.Main2-h3 {
+    font-size: 16px;
 }
 
-.line {
-    width: 95%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.5);
+.Text-container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+.Label2 {
+    font-size: 28px;
+    margin-top: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1860px) {
-    .Main-style {
+    .Main-style2 {
         width: 100%;
         height: 100%;
         justify-content: space-around;
         gap: 2em;
     }
-    .Main-title {
+    .Main-title2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -125,74 +146,79 @@
         width: 95%;
         margin: auto;
     }
-    .Main-title > h2 {
+    .Main-title2 > h2 {
         font-size: 22px;
     }
-    .Circle {
+    .Box2 {
+        padding: 2.5em;
+    }
+    .Circle2 {
         height: 7.5em;
         width: 7.5em;
     }
-    .Circle::before {
+    .Circle2::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
-    .Label {
+    .Main2-h3 {
+        font-size: 16px;
+    }
+    .Label2 {
         font-size: 22px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .Circle2 > h4 {
+    font-size: 36px;
     }
 }
 
 @media (max-width: 1300px) {
-    .Main-style {
+    .Main-style2 {
         width: 100%;
         height: 100%;
         
     }
-    .Main-title > h2 {
+    .Main-title2 > h2 {
     font-size: 18px;
     font-weight: 600;
     }
-    .Main-title > p {
+    .Main-title2 > p {
     font-size: 12px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .Main2-h3 {
+        font-size: 12px;
     }
-    .Label {
-        font-size: 16px;
+    .Box2 {
+        padding: 2em;
     }
-    .Circle {
-        height: 6em;
-        width: 6em;
+    .Label2 {
+        font-size: 18px;
     }
-    .Circle::before {
+    .Circle2 {
+        height: 5.5em;
+        width: 5.5em;
+    }
+    .Circle2::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
-        font-size: 36px;
+    .Circle2 > h4 {
+        font-size: 30px;
     }
 }
 
 
 
 @media (max-width: 1000px) {
-    .Main-style {
+    .Main-style2 {
         width: 100%;
         height: 100%;
     }
-    .Main-title {
+    .Main-title2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -200,39 +226,47 @@
         width: 95%;
         margin: auto;
     }
-    .Main-title > h2 {
+    .Main-title2 > h2 {
     font-size: 16px;
     font-weight: 600;
     }
-    .Main-title > p {
+    .Main-title2 > p {
     font-size: 12px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .Box2 {
+        padding: 1.5em;
+        flex-direction: column;
     }
-    .Label {
+    .Text-container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Label2 {
         font-size: 14px;
     }
-    .Circle {
-        height: 4em;
-        width: 4em;
+    .Main2-h3 {
+        font-size: 10px;
     }
-    .Circle::before {
+    .Circle2 {
+        height: 5em;
+        width: 5em;
+    }
+    .Circle2::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
-        font-size: 24px;
+    .Circle2 > h4 {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 850px) {
-    .Main-style {
+    .Main-style2 {
         width: 100%;
         height: 100%;
         flex-direction: column;
@@ -240,51 +274,47 @@
         align-items: flex-start;
     }
 
-    .Main-title {
+    .Main-title2 {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 95%;
         margin: auto;
     }
 
-    .Main-title > h2 {
-        font-size: 12px;
+    .Main-title2 > h2 {
+        font-size: 14px;
         font-weight: 600;
         flex-direction: column;
         align-items: flex-start;
-    }
-    .Main-title > p {
-        font-size: 14px;
     }
     .dynamicHeading {
         margin-left: 0em;
     }
 
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        flex-direction: column;
+    .Box2 {
+        padding: 1em;
     }
-    .Label {
-        font-size: 18px;
+    .Label2 {
+        font-size: 12px;
     }
-    .Circle {
+    .Main2-h3 {
+        font-size: 8px;
+    }
+    .Circle2 {
         height: 5em;
         width: 5em;
         margin: .5em;
     }
-    .Circle::before {
+    .Circle2::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
+    .Circle2 > h4 {
         font-size: 26px;
     }
 }
-

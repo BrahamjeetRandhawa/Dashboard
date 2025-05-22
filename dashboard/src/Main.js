@@ -1,95 +1,59 @@
 import "./Mainstyle.css";
+import React, { Fragment } from "react";
+// import Filter from "./Filter";
 
-function Main() {
+function Main({ financials }) {
+
+ 
+  const groupedData = [];
+  for (let i = 0; i < financials.length; i += 3) {
+    groupedData.push(financials.slice(i, i + 3));
+  }
+
+  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
+  // above 100% green, Between 95 and 100% amber, Below 95% red
+  
+ 
+
   return (
     <div className="Main-style">
+      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title">
-            <h2>FINANCIALS</h2>
+            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
             <p>Source: PP</p>
         </div>
-      <div className="Boxes">
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
+
+        {groupedData.map((group, groupIndex) => {
+          const color = (percentage) => {
+          if (percentage >= 100) return "#00cc66";
+          if (percentage >= 95) return "#ffcc00";
+          return "#ff0000";
+        };
+         return (
+        <Fragment key={groupIndex}>
+          <h3 className="Main-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          {group.map((item, index) => (
+
+        <div className="Box" key={item.id}>
+          <div className="Circle"
+          style={{
+            "--color": color(item.percentage),
+            "--target-percentage": `${item.percentage * 3.6}deg`
         }}>
-          {/* Here the number five needs to be percentage text */}
-            <h4>26</h4>
+            <h4>{item.percentage}</h4>
           </div>
-          <p>Budget</p>
+          <p className="Label">{item.label}</p>
         </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>28</h4>
-          </div>
-          <p>Actuals</p>
-        </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>108</h4>
-          </div>
-          <p>Achieved percentage</p>
-        </div>
+
+      ))}
 
         <span className="line"></span>
-
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>28</h4>
-          </div>
-          <p>Budget</p>
-        </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>28</h4>
-          </div>
-          <p>Actuals</p>
-        </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>108</h4>
-          </div>
-          <p>Achieved percentage</p>
-        </div>
-        
-        <span className="line"></span>
-
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>26%</h4>
-          </div>
-          <p>Budget</p>
-          </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>28%</h4>
-          </div>
-          <p>Actuals</p>
-          </div>
-        <div className="Box">
-          <div className="Circle" style={{
-          background: `conic-gradient(#00bfff ${5 * 3.6}deg, #eee 0deg)`
-        }}>
-            <h4>108%</h4>
-          </div>
-          <p>Achieved percentage</p>
-          </div>
-      </div>
+        </Fragment>
+        )
+    })}
     </div>
   );
 }
+        
 
 export default Main;
