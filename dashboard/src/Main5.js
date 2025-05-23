@@ -40,7 +40,7 @@ function Main5() {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3 className="Main5-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          
           {group.map((item, index) => (
 
         <div className="Box5" key={item.id}>
@@ -51,7 +51,8 @@ function Main5() {
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <p className="Label5">{item.label}</p>
+          <h3 className="Main5-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          <p className="Label5">- {item.label}</p>
         </div>
 
       ))}
