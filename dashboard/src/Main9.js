@@ -1,22 +1,22 @@
-import "./Mainstyle6.css";
+import "./Mainstyle9.css";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
 
-function Main6() {
+function Main9() {
 
-    const [northStar, setNorthStar] = useState([])
+    const [operationsHcltech, setOperationsHcltech] = useState([])
 
 
     useEffect(() => {
     axios.get("http://localhost:5500/api/data")
-  .then(res => setNorthStar(res.data.northStar))
+  .then(res => setOperationsHcltech(res.data.operationsHcltech))
   .catch(err => console.error(err));
   },[]);
  
   const groupedData = [];
-  for (let i = 0; i < northStar.length; i += 1) {
-    groupedData.push(northStar.slice(i, i + 1));
+  for (let i = 0; i < operationsHcltech.length; i += 1) {
+    groupedData.push(operationsHcltech.slice(i, i + 1));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];
@@ -25,10 +25,10 @@ function Main6() {
  
 
   return (
-    <div className="Main-style6">
+    <div className="Main-style9">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
-        <div className="Main-title6">
-            <h2>NORTH STAR POD <span className="dynamicHeading">{northStar[0]?.heading}</span></h2>
+        <div className="Main-title9">
+            <h2>OPERATIONS - HCLTECH SPEC <span className="dynamicHeading">{operationsHcltech[0]?.heading}</span></h2>
             <p>Source: Demand Tracker</p>
         </div>
 
@@ -43,16 +43,16 @@ function Main6() {
           
           {group.map((item, index) => (
 
-        <div className="Box6" key={item.id}>
-          <div className="Circle6"
+        <div className="Box9" key={item.id}>
+          <div className="Circle9"
           style={{
             "--color": color(item.percentage),
             "--target-percentage": `${item.percentage * 3.6}deg`
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <h3 className="Main6-h3">{group[0]?.title}</h3>
-          <p className="Label6">{item.label}</p>
+          <h3 className="Main9-h3">{group[0]?.title}</h3>
+          <p className="Label9">{item.label}</p>
         </div>
 
       ))}
@@ -66,4 +66,4 @@ function Main6() {
 }
         
 
-export default Main6;
+export default Main9;
