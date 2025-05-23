@@ -15,6 +15,7 @@ import Main3 from './Main3'; // Import the Main3 component
 
 import Main5 from './Main5'; // Import the Main5 component
 import Main6 from './Main6'; // Import the Main6 component
+import Main7 from './Main7'; // Import the Main7 component
 
 function App() {
 
@@ -100,6 +101,7 @@ function App() {
 
               <Route path="/thought_Leadership" element={<Main5 />} />
               <Route path="/north_Star" element={<Main6 />} />
+              <Route path="/GTM_Improvement" element={<Main7 />} />
             </Routes>
           </div>
         </div>
