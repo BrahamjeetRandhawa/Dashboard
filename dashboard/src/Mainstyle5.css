@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     margin-right: .5em;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .Circle5 {
@@ -99,7 +99,7 @@
 }
 
 .Label5 {
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .line {
@@ -125,6 +125,9 @@
     }
     .Main-title5 > h2 {
         font-size: 22px;
+    }
+    .Main5-h3 {
+    font-size: 30px;
     }
     .Circle5 {
         height: 7.5em;
@@ -158,6 +161,9 @@
     }
     .Main-title5 > p {
     font-size: 12px;
+    }
+    .Main5-h3 {
+    font-size: 26px;
     }
     .Box5 {
         margin: 0em;
@@ -205,6 +211,9 @@
     .Main-title5 > p {
     font-size: 12px;
     }
+    .Main5-h3 {
+    font-size: 22px;
+    }
     .Box5 {
         margin: 0em;
         margin-top: 1em;
@@ -235,7 +244,7 @@
         height: 100%;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .Main-title5 {
@@ -256,10 +265,13 @@
     .Main-title5 > p {
         font-size: 14px;
     }
+    .Main5-h3 {
+    font-size: 26px;
+    margin-bottom: 0;
+    }
     .dynamicHeading {
         margin-left: 0em;
     }
-
     .Box5 {
         margin: 0em;
         margin-top: 1em;
@@ -267,7 +279,8 @@
         flex-direction: column;
     }
     .Label5 {
-        font-size: 18px;
+        font-size: 16px;
+        flex-wrap: wrap;
     }
     .Circle5 {
         height: 5em;

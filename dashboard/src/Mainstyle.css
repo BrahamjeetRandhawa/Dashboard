@@ -237,7 +237,7 @@
         height: 100%;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .Main-title {
@@ -258,10 +258,14 @@
     .Main-title > p {
         font-size: 14px;
     }
+    .Main-h3 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
     .dynamicHeading {
         margin-left: 0em;
     }
-
     .Box {
         margin: 0em;
         margin-top: 1em;
