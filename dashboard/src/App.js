@@ -20,6 +20,8 @@ import Main7 from './Main7'; // Import the Main7 component
 import Main9 from './Main9'; // Import the Main9 component
 import Main10 from './Main10'; // Import the Main10 component
 
+import Main12 from './Main12'; // Import the Main12 component
+
 function App() {
 
   const [financials, setFinancials] = useState([]);
@@ -108,6 +110,8 @@ function App() {
 
               <Route path="/operations_Hcltech" element={<Main9 />} />
               <Route path="/customer_Delight" element={<Main10 />} />
+
+              <Route path="/engineer_Delight" element={<Main12 />} />
             </Routes>
           </div>
         </div>

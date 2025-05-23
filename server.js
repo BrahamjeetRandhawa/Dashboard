@@ -54,6 +54,10 @@ app.get('/api/data', (req, res) => {
     const customerDelightSheet = workbook.Sheets['Customer_delight'];
     const customerDelightData = xlsx.utils.sheet_to_json(customerDelightSheet);
 
+    // Engineer Delight uitlezen
+    const engineerDelightSheet = workbook.Sheets['Engineer_delight'];
+    const engineerDelightData = xlsx.utils.sheet_to_json(engineerDelightSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
@@ -62,7 +66,8 @@ app.get('/api/data', (req, res) => {
         northStar: northStarData,
         gtmImprovement: gtmImprovementData,
         operationsHcltech: operationsHCLTechData,
-        customerDelight: customerDelightData
+        customerDelight: customerDelightData,
+        engineerDelight: engineerDelightData
 
     });
 });

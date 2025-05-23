@@ -19,7 +19,7 @@ function Sidebar() {
         <li className="Sidebar__menu-item"><Link to="/operations_Hcltech">OPERATIONS - HCLTECH SPECIFIC</Link></li>
         <li className="Sidebar__menu-item"><Link to="/customer_Delight">CUSTOMER DELIGHT</Link></li>
         <li className="Sidebar__menu-item"><a href="#DEX">DEX</a></li>
-        <li className="Sidebar__menu-item"><a href="#ENGINEER DELIGHT">ENGINEER DELIGHT</a></li>
+        <li className="Sidebar__menu-item"><Link to="/engineer_Delight">ENGINEER DELIGHT</Link></li>
         <li className="Sidebar__menu-item"><a href="#ENGINEER UPSKILLING">ENGINEER UPSKILLING</a></li>
         <li className="Sidebar__menu-item"><a href="#GOVERNANCE-CUSTOMER FACING">GOVERNANCE-CUSTOMER FACING</a></li>
         <li className="Sidebar__menu-item"><a href="#GOVERNANCE-INTERNAL FACING">GOVERNANCE-INTERNAL FACING</a></li>
