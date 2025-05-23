@@ -46,9 +46,13 @@ app.get('/api/data', (req, res) => {
     const gtmImprovementSheet = workbook.Sheets['GTM_improvement'];
     const gtmImprovementData = xlsx.utils.sheet_to_json(gtmImprovementSheet);
 
-    // Operations HCLTech Specific
+    // Operations HCLTech Specific uitlezen
     const operationsHCLTechSheet = workbook.Sheets['Operations_hcltech'];
     const operationsHCLTechData = xlsx.utils.sheet_to_json(operationsHCLTechSheet);
+
+    // Customer Delight uitlezen
+    const customerDelightSheet = workbook.Sheets['Customer_delight'];
+    const customerDelightData = xlsx.utils.sheet_to_json(customerDelightSheet);
 
     res.json({
         financials: financialData,
@@ -57,7 +61,8 @@ app.get('/api/data', (req, res) => {
         thoughtLeadership: thoughtLeadershipData,
         northStar: northStarData,
         gtmImprovement: gtmImprovementData,
-        operationsHcltech: operationsHCLTechData
+        operationsHcltech: operationsHCLTechData,
+        customerDelight: customerDelightData
 
     });
 });
