@@ -58,6 +58,10 @@ app.get('/api/data', (req, res) => {
     const engineerDelightSheet = workbook.Sheets['Engineer_delight'];
     const engineerDelightData = xlsx.utils.sheet_to_json(engineerDelightSheet);
 
+    // Engineer Upskilling uitlezen
+    const engineerUpskillingSheet = workbook.Sheets['Engineer_upskilling'];
+    const engineerUpskillingData = xlsx.utils.sheet_to_json(engineerUpskillingSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
@@ -67,7 +71,8 @@ app.get('/api/data', (req, res) => {
         gtmImprovement: gtmImprovementData,
         operationsHcltech: operationsHCLTechData,
         customerDelight: customerDelightData,
-        engineerDelight: engineerDelightData
+        engineerDelight: engineerDelightData,
+        engineerUpskilling: engineerUpskillingData
 
     });
 });
