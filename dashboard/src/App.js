@@ -14,6 +14,7 @@ import Main2 from './Main2'; // Import the Main2 component
 import Main3 from './Main3'; // Import the Main3 component
 
 import Main5 from './Main5'; // Import the Main5 component
+import Main6 from './Main6'; // Import the Main6 component
 
 function App() {
 
@@ -98,6 +99,7 @@ function App() {
               <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
 
               <Route path="/thought_Leadership" element={<Main5 />} />
+              <Route path="/north_Star" element={<Main6 />} />
             </Routes>
           </div>
         </div>

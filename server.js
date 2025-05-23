@@ -38,11 +38,15 @@ app.get('/api/data', (req, res) => {
     const thoughtLeadershipSheet = workbook.Sheets['Thought_leadership'];
     const thoughtLeadershipData = xlsx.utils.sheet_to_json(thoughtLeadershipSheet);
 
+    const nortStarSheet = workbook.Sheets['North_star'];
+    const northStarData = xlsx.utils.sheet_to_json(nortStarSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
         fulfilmentView: fulfilmentViewData,
-        thoughtLeadership: thoughtLeadershipData
+        thoughtLeadership: thoughtLeadershipData,
+        northStar: northStarData
     });
 });
 
