@@ -21,7 +21,7 @@ function Sidebar() {
         <li className="Sidebar__menu-item"><a href="#DEX">DEX</a></li>
         <li className="Sidebar__menu-item"><Link to="/engineer_Delight">ENGINEER DELIGHT</Link></li>
         <li className="Sidebar__menu-item"><Link to="/engineer_Upskilling">ENGINEER UPSKILLING</Link></li>
-        <li className="Sidebar__menu-item"><a href="#GOVERNANCE-CUSTOMER FACING">GOVERNANCE-CUSTOMER FACING</a></li>
+        <li className="Sidebar__menu-item"><Link to="/governance_Customer">GOVERNANCE - CUSTOMER FACING</Link></li>
         <li className="Sidebar__menu-item"><a href="#GOVERNANCE-INTERNAL FACING">GOVERNANCE-INTERNAL FACING</a></li>
       </ul>
     </nav>

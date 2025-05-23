@@ -22,6 +22,7 @@ import Main10 from './Main10'; // Import the Main10 component
 
 import Main12 from './Main12'; // Import the Main12 component
 import Main13 from './Main13'; // Import the Main13 component
+import Main14 from './Main14'; // Import the Main14 component
 
 function App() {
 
@@ -114,6 +115,7 @@ function App() {
 
               <Route path="/engineer_Delight" element={<Main12 />} />
               <Route path="/engineer_Upskilling" element={<Main13 />} />
+              <Route path="/governance_Customer" element={<Main14 />} />
             </Routes>
           </div>
         </div>
