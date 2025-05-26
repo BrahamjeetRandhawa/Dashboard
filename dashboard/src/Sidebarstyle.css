@@ -11,13 +11,14 @@
 
 ul {
     padding: 0;
-    width: 95%;
+    width: 100%;
+    margin-top: 20px;
 }
 
 li {
     list-style: none;
     border-bottom: 0.1px solid rgba(255, 255, 255, 0.5);
-    margin-top: 3%;
+    
     padding: 0.4em;
 }
 
@@ -29,6 +30,53 @@ a {
     font-size: 18px;
 }
 
+.active-link {
+    font-weight: 600;
+    transition: 1s ease-in-out;
+    color: black;
+}
+
+.Sidebar_menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    background: linear-gradient(to right, royalblue 30%, lightblue 70%) left;
+    background-size: 200% 100%;
+    transition: .5s ease-out;
+}
+
+.Sidebar_menu-indicator {
+    width: 6px;
+    height: 24px;
+    background-color: transparent;
+    margin-right: 12px;
+    border-radius: 3px;
+    transition: background-color 3s ease;
+    transform: translateX(-50px);
+}
+
+.Sidebar_menu-item:has(.active-link) .Sidebar_menu-indicator {
+    background-color: darkblue;
+    width: 20px;
+    transform: translateX(0);
+    transition: .3s ease;
+}
+
+.Sidebar_menu-item:has(.active-link) {
+    background-position: right;
+}
+
+.Sidebar_menu-item:hover {
+    background-position: right;
+    z-index: 2;
+    
+}
 @media (max-width: 1000px) {
     .Sidebar {
         flex-wrap: wrap;
