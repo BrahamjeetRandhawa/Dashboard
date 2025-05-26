@@ -54,7 +54,7 @@ function Main5() {
             "--color": color(item.percentage),
             "--target-percentage": `${item.percentage * 3.6}deg`
         }}>
-            <h4>{item.percentage}</h4>
+            <h4>{item.percentage}%</h4>
           </div>
           ) : (
             <h4 className="no-circle_percentage">{item.percentage}</h4>
