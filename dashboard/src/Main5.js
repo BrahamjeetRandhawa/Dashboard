@@ -33,17 +33,22 @@ function Main5() {
         </div>
 
         {groupedData.map((group, groupIndex) => {
+          return (
+            <Fragment key={groupIndex}>
+              {group.map((item, index) => {
+                const isLast = groupIndex === groupedData.length - 1 && index === group.length - 1;
+
           const color = (percentage) => {
           if (percentage >= 100) return "#00cc66";
           if (percentage >= 95) return "#ffcc00";
           return "#ff0000";
         };
+
          return (
-        <Fragment key={groupIndex}>
           
-          {group.map((item, index) => (
 
         <div className="Box5" key={item.id}>
+          {isLast ? (
           <div className="Circle5"
           style={{
             "--color": color(item.percentage),
@@ -51,15 +56,18 @@ function Main5() {
         }}>
             <h4>{item.percentage}</h4>
           </div>
+          ) : (
+            <h4 className="no-circle_percentage">{item.percentage}</h4>
+          )}
           <h3 className="Main5-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
           <p className="Label5">- {item.label}</p>
         </div>
-
-      ))}
+         );
+        })}
 
         <span className="line"></span>
         </Fragment>
-        )
+        );
     })}
     </div>
   );
