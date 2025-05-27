@@ -8,21 +8,21 @@ function Sidebar() {
   return (
     <nav className="Sidebar">
       <ul className="Sidebar_menu">
-        <li className="Sidebar_menu-item"><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}><span className='Sidebar_menu-indicator' />FINANCIALS</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/demand" className={({ isActive }) => isActive ? "active-link" : ""}><span className='Sidebar_menu-indicator' />DEMAND VIEW</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/fulfilment" className={({ isActive }) => isActive ? "active-link" : ""}><span className='Sidebar_menu-indicator' /> FULFILMENT VIEW</NavLink></li>
-        <li className="Sidebar_menu-item"><a href="#CLIENT PARTNER FOCUS" className={({ isActive }) => isActive ? "active-link" : ""}><span className='Sidebar_menu-indicator' /> CLIENT PARTNER FOCUS</a></li>
-        <li className="Sidebar_menu-item"><NavLink to="/thought_Leadership" className={({ isActive }) => isActive ? "active-link" : ""}><span className='Sidebar_menu-indicator' /> THOUGHT LEADERSHIP DEMONSTRATION</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/north_Star">NORTH STAR POD</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/GTM_improvement">GTM IMPROVEMENT FOCUS</NavLink></li>
-        <li className="Sidebar_menu-item"><a href="#OPERATIONS-CUSTOMER SPECIFIC">OPERATIONS-CUSTOMER SPECIFIC</a></li>
-        <li className="Sidebar_menu-item"><NavLink to="/operations_Hcltech">OPERATIONS - HCLTECH SPECIFIC</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/customer_Delight">CUSTOMER DELIGHT</NavLink></li>
-        <li className="Sidebar_menu-item"><a href="#DEX">DEX</a></li>
-        <li className="Sidebar_menu-item"><NavLink to="/engineer_Delight">ENGINEER DELIGHT</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/engineer_Upskilling">ENGINEER UPSKILLING</NavLink></li>
-        <li className="Sidebar_menu-item"><NavLink to="/governance_Customer">GOVERNANCE - CUSTOMER FACING</NavLink></li>
-        <li className="Sidebar_menu-item"><a href="#GOVERNANCE-INTERNAL FACING">GOVERNANCE-INTERNAL FACING</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>FINANCIALS</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/demand" className={({ isActive }) => isActive ? "active-link" : ""}>DEMAND VIEW</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/fulfilment" className={({ isActive }) => isActive ? "active-link" : ""}>FULFILMENT VIEW</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#CLIENT PARTNER FOCUS" className={({ isActive }) => isActive ? "active-link" : ""}>CLIENT PARTNER FOCUS</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/thought_Leadership" className={({ isActive }) => isActive ? "active-link" : ""}> THOUGHT LEADERSHIP DEMONSTRATION</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/north_Star" className={({ isActive }) => isActive ? "active-link" : ""}>NORTH STAR POD</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/GTM_improvement" className={({ isActive }) => isActive ? "active-link" : ""}>GTM IMPROVEMENT FOCUS</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#OPERATIONS-CUSTOMER SPECIFIC" className={({ isActive }) => isActive ? "active-link" : ""}>OPERATIONS-CUSTOMER SPECIFIC</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/operations_Hcltech" className={({ isActive }) => isActive ? "active-link" : ""}>OPERATIONS - HCLTECH SPECIFIC</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/customer_Delight" className={({ isActive }) => isActive ? "active-link" : ""}>CUSTOMER DELIGHT</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#DEX" className={({ isActive }) => isActive ? "active-link" : ""}>DEX</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Delight" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER DELIGHT</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Upskilling" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER UPSKILLING</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/governance_Customer" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE - CUSTOMER FACING</NavLink></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#GOVERNANCE-INTERNAL FACING" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE-INTERNAL FACING</a></li>
       </ul>
     </nav>
   );

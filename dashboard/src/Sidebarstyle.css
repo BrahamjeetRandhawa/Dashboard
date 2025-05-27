@@ -11,7 +11,7 @@
 
 ul {
     padding: 0;
-    width: 100%;
+    width: 95%;
     margin-top: 20px;
 }
 
@@ -32,8 +32,9 @@ a {
 
 .active-link {
     font-weight: 600;
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
     color: black;
+    margin-left: 20px;
 }
 
 .Sidebar_menu-item {
@@ -53,10 +54,11 @@ a {
 
 .Sidebar_menu-indicator {
     width: 6px;
-    height: 24px;
+    height: 100%;
     background-color: transparent;
     margin-right: 12px;
-    border-radius: 3px;
+    position: absolute;
+    left: -5%;
     transition: background-color 3s ease;
     transform: translateX(-50px);
 }
@@ -77,6 +79,8 @@ a {
     z-index: 2;
     
 }
+
+
 @media (max-width: 1000px) {
     .Sidebar {
         flex-wrap: wrap;
