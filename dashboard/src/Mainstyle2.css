@@ -227,11 +227,11 @@
         margin: auto;
     }
     .Main-title2 > h2 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .Main-title2 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Box2 {
         padding: 1.5em;
@@ -252,6 +252,7 @@
     .Circle2 {
         height: 5em;
         width: 5em;
+        margin: 0;
     }
     .Circle2::before {
         top: 10%;
@@ -303,9 +304,9 @@
         font-size: 8px;
     }
     .Circle2 {
-        height: 5em;
-        width: 5em;
-        margin: .5em;
+        height: 4em;
+        width: 4em;
+        margin-bottom: .5em;
     }
     .Circle2::before {
         top: 10%;
@@ -315,6 +316,6 @@
     }
     
     .Circle2 > h4 {
-        font-size: 26px;
+        font-size: 22px;
     }
 }
