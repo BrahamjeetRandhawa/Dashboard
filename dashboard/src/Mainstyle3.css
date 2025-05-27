@@ -31,7 +31,12 @@
     justify-content: flex-start;
     align-items: center;
     
-    padding: 3em;
+    padding: 2em;
+}
+
+.Text-container3 {
+    display: flex;
+    flex-direction: column;
 }
 
 .Box3-id-1 {
@@ -83,7 +88,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-right: 1.5em;
+    margin-right: 1em;
     animation: fillCircle 2s ease forwards;
     --percentage: 0deg;
 
@@ -125,10 +130,16 @@
     margin-bottom: 0;
 }
 
-.Box3-id-1 .Label3, .Box3-id-2 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+.Box3-id-2 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
     font-size: 30px;
     font-weight: light;
     margin-top: 0.2em;
+}
+
+.Box3-id-1 .Label3 {
+    font-size: 30px;
+    font-weight: light;
+    text-align: center;
 }
 
 .Box3-id-3 .Main3-h3 {
@@ -177,7 +188,11 @@
         font-size: 22px;
     }
     .Box3 {
-        padding: 2.5em;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+    .Box3-id-3 {
+        width: 90%;
     }
     .Circle3 {
         height: 7.5em;
@@ -189,14 +204,34 @@
         width: 80%;
         height: 80%;
     }
-    .Main3-h3 {
+    
+
+    .Box3-id-1 .Main3-h3 {
+        display: none;
+    }
+
+    .Box3-id-2 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
         font-size: 16px;
     }
-    .Label3 {
+
+    .Box3-id-2 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
         font-size: 22px;
     }
+
+    .Box3-id-1 .Label3 {
+        font-size: 22px;
+    }
+
+    .Box3-id-3 .Main3-h3 {
+        font-size: 16px;
+    }
+
+    .Box3-id-3 .Label3 {
+        font-size: 30px;
+    }
+
     .Circle3 > h4 {
-    font-size: 36px;
+        font-size: 36px;
     }
 }
 
@@ -213,18 +248,13 @@
     .Main-title3 > p {
     font-size: 12px;
     }
-    .Main3-h3 {
-        font-size: 12px;
-    }
     .Box3 {
-        padding: 2em;
-    }
-    .Label3 {
-        font-size: 18px;
+        padding-top: 3.5em;
+        padding-bottom: 3.5em;
     }
     .Circle3 {
-        height: 5.5em;
-        width: 5.5em;
+        height: 6em;
+        width: 6em;
     }
     .Circle3::before {
         top: 10%;
@@ -232,7 +262,15 @@
         width: 80%;
         height: 80%;
     }
-    
+
+    .Box3-id-2 .Main3-h3, .Box3-id-3 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
+        font-size: 12px;
+    }
+
+    .Box3-id-1 .Label3, .Box3-id-2 .Label3, .Box3-id-3 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+        font-size: 18px;
+    }
+
     .Circle3 > h4 {
         font-size: 30px;
     }
@@ -263,6 +301,7 @@
     .Box3 {
         padding: 1.5em;
         flex-direction: column;
+        text-align: center;
     }
     .Label3 {
         font-size: 14px;
