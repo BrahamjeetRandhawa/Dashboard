@@ -39,16 +39,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    margin-left: 5em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 .Main10-h3 {
-    display: flex;
-    align-items: center;
-    margin-right: .5em;
-    font-size: 32px;
+    display: none;
 }
 
 .Circle10 {
@@ -99,8 +96,8 @@
 }
 
 .Label10 {
-    font-size: 26px;
-    font-weight: 750;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .line {
@@ -109,11 +106,11 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1860px) {
+@media (max-width: 1800px) {
     .Main-style10 {
         width: 100%;
         height: 100%;
-        justify-content: space-around;
+        justify-content: flex-start;
         gap: 2em;
     }
     .Main-title10 {
@@ -127,12 +124,9 @@
     .Main-title10 > h2 {
         font-size: 22px;
     }
-    .Main10-h3 {
-    font-size: 30px;
-    }
     .Circle10 {
-        height: 7.5em;
-        width: 7.5em;
+        height: 7.8em;
+        width: 7.8em;
     }
     .Circle10::before {
         top: 10%;
@@ -141,13 +135,9 @@
         height: 80%;
     }
     .Label10 {
-        font-size: 22px;
+        font-size: 30px;
     }
-    .Box10 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+
 }
 
 @media (max-width: 1300px) {
@@ -157,26 +147,21 @@
         
     }
     .Main-title10 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title10 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Main10-h3 {
-    font-size: 26px;
-    }
-    .Box10 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        font-size: 26px;
     }
     .Label10 {
-        font-size: 16px;
+        font-size: 26px;
     }
     .Circle10 {
-        height: 6em;
-        width: 6em;
+        height: 7em;
+        width: 7em;
     }
     .Circle10::before {
         top: 10%;
@@ -186,7 +171,7 @@
     }
     
     .Circle10 > h4 {
-        font-size: 36px;
+        font-size: 38px;
     }
 }
 
@@ -202,30 +187,23 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
+        width: 92%;
         margin: auto;
     }
     .Main-title10 > h2 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .Main-title10 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
-    .Main10-h3 {
-    font-size: 22px;
-    }
-    .Box10 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+    
     .Label10 {
-        font-size: 14px;
+        font-size: 24px;
     }
     .Circle10 {
-        height: 4em;
-        width: 4em;
+        height: 6em;
+        width: 6em;
     }
     .Circle10::before {
         top: 10%;
@@ -235,7 +213,7 @@
     }
     
     .Circle10 > h4 {
-        font-size: 24px;
+        font-size: 34px;
     }
 }
 
@@ -279,13 +257,13 @@
         flex-direction: column;
     }
     .Label10 {
-        font-size: 16px;
+        font-size: 26px;
         flex-wrap: wrap;
         text-align: center;
     }
     .Circle10 {
-        height: 5em;
-        width: 5em;
+        height: 7.5em;
+        width: 7.5em;
         margin: .5em;
     }
     .Circle10::before {
@@ -296,6 +274,6 @@
     }
     
     .Circle10 > h4 {
-        font-size: 26px;
+        font-size: 40px;
     }
 }
