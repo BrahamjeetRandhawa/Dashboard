@@ -39,16 +39,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    margin-left: 5em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 .Main9-h3 {
-    display: flex;
-    align-items: center;
-    margin-right: .5em;
-    font-size: 32px;
+    display: none;
 }
 
 .Circle9 {
@@ -99,7 +96,7 @@
 }
 
 .Label9 {
-    font-size: 26px;
+    font-size: 34px;
 }
 
 .line {
@@ -108,11 +105,11 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1860px) {
+@media (max-width: 1800px) {
     .Main-style9 {
         width: 100%;
         height: 100%;
-        justify-content: space-around;
+        justify-content: flex-start;
         gap: 2em;
     }
     .Main-title9 {
@@ -126,12 +123,9 @@
     .Main-title9 > h2 {
         font-size: 22px;
     }
-    .Main9-h3 {
-    font-size: 30px;
-    }
     .Circle9 {
-        height: 7.5em;
-        width: 7.5em;
+        height: 7.8em;
+        width: 7.8em;
     }
     .Circle9::before {
         top: 10%;
@@ -140,13 +134,9 @@
         height: 80%;
     }
     .Label9 {
-        font-size: 22px;
+        font-size: 30px;
     }
-    .Box9 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+
 }
 
 @media (max-width: 1300px) {
@@ -156,26 +146,21 @@
         
     }
     .Main-title9 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title9 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Main9-h3 {
-    font-size: 26px;
-    }
-    .Box9 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        font-size: 26px;
     }
     .Label9 {
-        font-size: 16px;
+        font-size: 26px;
     }
     .Circle9 {
-        height: 6em;
-        width: 6em;
+        height: 7em;
+        width: 7em;
     }
     .Circle9::before {
         top: 10%;
@@ -185,7 +170,7 @@
     }
     
     .Circle9 > h4 {
-        font-size: 36px;
+        font-size: 38px;
     }
 }
 
@@ -201,30 +186,23 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
+        width: 92%;
         margin: auto;
     }
     .Main-title9 > h2 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .Main-title9 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
-    .Main9-h3 {
-    font-size: 22px;
-    }
-    .Box9 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+    
     .Label9 {
-        font-size: 14px;
+        font-size: 24px;
     }
     .Circle9 {
-        height: 4em;
-        width: 4em;
+        height: 6em;
+        width: 6em;
     }
     .Circle9::before {
         top: 10%;
@@ -234,7 +212,7 @@
     }
     
     .Circle9 > h4 {
-        font-size: 24px;
+        font-size: 34px;
     }
 }
 
@@ -278,13 +256,13 @@
         flex-direction: column;
     }
     .Label9 {
-        font-size: 16px;
+        font-size: 26px;
         flex-wrap: wrap;
         text-align: center;
     }
     .Circle9 {
-        height: 5em;
-        width: 5em;
+        height: 7.5em;
+        width: 7.5em;
         margin: .5em;
     }
     .Circle9::before {
@@ -295,6 +273,6 @@
     }
     
     .Circle9 > h4 {
-        font-size: 26px;
+        font-size: 40px;
     }
 }
