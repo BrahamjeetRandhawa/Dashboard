@@ -112,7 +112,6 @@
     .Main-style6 {
         width: 100%;
         height: 100%;
-        justify-content: space-around;
         gap: 2em;
     }
     .Main-title6 {
@@ -143,7 +142,6 @@
         font-size: 22px;
     }
     .Box6 {
-        margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
     }
@@ -166,7 +164,6 @@
     font-size: 26px;
     }
     .Box6 {
-        margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
     }
@@ -215,7 +212,6 @@
     font-size: 22px;
     }
     .Box6 {
-        margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
     }
@@ -266,6 +262,7 @@
     .Main6-h3 {
         font-size: 26px;
         margin-bottom: 0;
+        margin-right: 0;
         text-align: center;
     }
     .dynamicHeading {
