@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 2.5em;
 }
 
 .Main-title14 {
@@ -27,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0;
 }
 
 .Main-title14 > p {
@@ -39,16 +37,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    margin-left: 5em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 .Main14-h3 {
-    display: flex;
-    align-items: center;
-    margin-right: .5em;
-    font-size: 32px;
+    display: none;
 }
 
 .Circle14 {
@@ -99,18 +94,14 @@
 }
 
 .Label14 {
-    font-size: 26px;
-    font-weight: 750;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 
-
-@media (max-width: 1860px) {
+@media (max-width: 1800px) {
     .Main-style14 {
-        width: 100%;
-        height: 100%;
-        justify-content: space-around;
-        gap: 2em;
+        height: 50%;
     }
     .Main-title14 {
         display: flex;
@@ -118,17 +109,14 @@
         justify-content: space-between;
         align-items: center;
         width: 95%;
-        margin: auto;
+        margin-top: 0;
     }
     .Main-title14 > h2 {
         font-size: 22px;
     }
-    .Main14-h3 {
-    font-size: 30px;
-    }
     .Circle14 {
-        height: 7.5em;
-        width: 7.5em;
+        height: 7.8em;
+        width: 7.8em;
     }
     .Circle14::before {
         top: 10%;
@@ -137,38 +125,62 @@
         height: 80%;
     }
     .Label14 {
-        font-size: 22px;
+        font-size: 30px;
     }
-    .Box14 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+
 }
 
 @media (max-width: 1300px) {
-    .Main-style14 {
-        width: 100%;
-        height: 100%;
-        
-    }
     .Main-title14 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title14 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Main14-h3 {
-    font-size: 26px;
-    }
-    .Box14 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        font-size: 26px;
     }
     .Label14 {
+        font-size: 26px;
+    }
+    .Circle14 {
+        height: 7em;
+        width: 7em;
+    }
+    .Circle14::before {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .Circle14 > h4 {
+        font-size: 38px;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .Main-title14 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 92%;
+        margin: auto;
+    }
+    .Main-title14 > h2 {
         font-size: 16px;
+        font-weight: 600;
+    }
+    .Main-title14 > p {
+        font-size: 12px;
+    }
+    
+    .Label14 {
+        font-size: 24px;
     }
     .Circle14 {
         height: 6em;
@@ -182,70 +194,16 @@
     }
     
     .Circle14 > h4 {
-        font-size: 36px;
-    }
-}
-
-
-
-@media (max-width: 1000px) {
-    .Main-style14 {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .Main-title14 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        margin: 0;
-    }
-    .Main-title14 > h2 {
-    font-size: 16px;
-    font-weight: 600;
-    }
-    .Main-title14 > p {
-    font-size: 12px;
-    }
-    .Main14-h3 {
-    font-size: 22px;
-    }
-    .Box14 {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    .Label14 {
-        font-size: 14px;
-    }
-    .Circle14 {
-        height: 4em;
-        width: 4em;
-    }
-    .Circle14::before {
-        top: 10%;
-        left: 10%;
-        width: 80%;
-        height: 80%;
-    }
-    
-    .Circle14 > h4 {
-        font-size: 24px;
+        font-size: 34px;
     }
 }
 
 @media (max-width: 850px) {
     .Main-style14 {
-        width: 100%;
-        height: 100%;
+        height: 50%;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: flex-start;
     }
     .Main-title14 {
         display: flex;
@@ -253,7 +211,7 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 95%;
-        margin: 0;
+        margin: auto;
     }
     .Main-title14 > h2 {
         font-size: 12px;
@@ -279,13 +237,13 @@
         flex-direction: column;
     }
     .Label14 {
-        font-size: 16px;
+        font-size: 26px;
         flex-wrap: wrap;
         text-align: center;
     }
     .Circle14 {
-        height: 5em;
-        width: 5em;
+        height: 7.5em;
+        width: 7.5em;
         margin: .5em;
     }
     .Circle14::before {
@@ -296,6 +254,6 @@
     }
     
     .Circle14 > h4 {
-        font-size: 26px;
+        font-size: 40px;
     }
 }
