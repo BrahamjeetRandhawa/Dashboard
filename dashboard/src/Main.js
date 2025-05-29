@@ -1,4 +1,5 @@
 import "./Mainstyle.css";
+import CircleAnimation from "./circleAnimation";
 import React, { Fragment } from "react";
 // import Filter from "./Filter";
 
@@ -24,24 +25,13 @@ function Main({ financials }) {
         </div>
 
         {groupedData.map((group, groupIndex) => {
-          const color = (percentage) => {
-          if (percentage >= 100) return "#00cc66";
-          if (percentage >= 95) return "#ffcc00";
-          return "#ff0000";
-        };
          return (
         <Fragment key={groupIndex}>
           <h3 className="Main-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
-          {group.map((item, index) => (
+          {group.map((item) => (
 
         <div className="Box" key={item.id}>
-          <div className="Circle"
-          style={{
-            "--color": color(item.percentage),
-            "--target-percentage": `${item.percentage * 3.6}deg`
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
+          <CircleAnimation percentage={item.percentage} />
           <p className="Label">{item.label}</p>
         </div>
 
