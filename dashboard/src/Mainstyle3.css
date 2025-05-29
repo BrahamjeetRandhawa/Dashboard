@@ -242,15 +242,14 @@
         
     }
     .Main-title3 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title3 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Box3 {
-        padding-top: 3.5em;
-        padding-bottom: 3.5em;
+        padding: 1em;
     }
     .Circle3 {
         height: 6em;
