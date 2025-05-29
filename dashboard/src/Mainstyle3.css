@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
+    width: 92%;
     margin: auto;
 }
 
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0;
 }
 
 .Main3-grid {
@@ -31,7 +30,12 @@
     justify-content: flex-start;
     align-items: center;
     
-    padding: 3em;
+    padding: 2em;
+}
+
+.Text-container3 {
+    display: flex;
+    flex-direction: column;
 }
 
 .Box3-id-1 {
@@ -48,8 +52,13 @@
 }
 
 .Box3-id-3 {
+    width: 62%;
     grid-column: 1;
     grid-row: span 2;
+}
+
+.Box3-id-3 .Circle3 {
+    display: none;
 }
 
 .Box3-id-4 {
@@ -78,7 +87,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-right: 1.5em;
+    margin-right: 1em;
     animation: fillCircle 2s ease forwards;
     --percentage: 0deg;
 
@@ -101,18 +110,48 @@
 
 .Circle3 > h4 {
     font-size: 40px;
+    font-weight: 100;
     position: relative;
     z-index: 2;
+    color: blue;
 }
 
 
 
-.Main3-h3 {
+
+
+.Box3-id-1 .Main3-h3 {
+    display: none;
+}
+
+.Box3-id-2 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
     font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
 }
 
-.Label3 {
-    font-size: 28px;
+.Box3-id-2 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+    font-size: 30px;
+    font-weight: light;
+    margin-top: 0.2em;
+}
+
+.Box3-id-1 .Label3 {
+    font-size: 30px;
+    font-weight: light;
+    text-align: center;
+}
+
+.Box3-id-3 .Main3-h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0em;
+}
+
+.Box3-id-3 .Label3 {
+    font-size: 30px;
+    font-weight: light;
+    margin-top: 0em;
 }
 
 
@@ -130,8 +169,7 @@
 
 
 
-
-@media (max-width: 1860px) {
+@media (max-width: 1850px) {
     .Main-style3 {
         width: 100%;
         height: 100%;
@@ -150,7 +188,11 @@
         font-size: 22px;
     }
     .Box3 {
-        padding: 2.5em;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+    .Box3-id-3 {
+        width: 90%;
     }
     .Circle3 {
         height: 7.5em;
@@ -162,14 +204,34 @@
         width: 80%;
         height: 80%;
     }
-    .Main3-h3 {
+    
+
+    .Box3-id-1 .Main3-h3 {
+        display: none;
+    }
+
+    .Box3-id-2 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
         font-size: 16px;
     }
-    .Label3 {
+
+    .Box3-id-2 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
         font-size: 22px;
     }
+
+    .Box3-id-1 .Label3 {
+        font-size: 22px;
+    }
+
+    .Box3-id-3 .Main3-h3 {
+        font-size: 16px;
+    }
+
+    .Box3-id-3 .Label3 {
+        font-size: 30px;
+    }
+
     .Circle3 > h4 {
-    font-size: 36px;
+        font-size: 36px;
     }
 }
 
@@ -180,24 +242,18 @@
         
     }
     .Main-title3 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title3 > p {
-    font-size: 12px;
-    }
-    .Main3-h3 {
         font-size: 12px;
     }
     .Box3 {
-        padding: 2em;
-    }
-    .Label3 {
-        font-size: 18px;
+        padding: 1em;
     }
     .Circle3 {
-        height: 5.5em;
-        width: 5.5em;
+        height: 6em;
+        width: 6em;
     }
     .Circle3::before {
         top: 10%;
@@ -205,7 +261,15 @@
         width: 80%;
         height: 80%;
     }
-    
+
+    .Box3-id-2 .Main3-h3, .Box3-id-3 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
+        font-size: 12px;
+    }
+
+    .Box3-id-1 .Label3, .Box3-id-2 .Label3, .Box3-id-3 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+        font-size: 18px;
+    }
+
     .Circle3 > h4 {
         font-size: 30px;
     }
@@ -235,22 +299,30 @@
     }
     .Box3 {
         padding: 1.5em;
+        flex-direction: column;
+        text-align: center;
     }
-    .Label3 {
-        font-size: 14px;
-    }
-    .Main3-h3 {
-        font-size: 10px;
+    .Box3-id-3 {
+        text-align: start;
     }
     .Circle3 {
         height: 5em;
         width: 5em;
+        margin: 0em;
     }
     .Circle3::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
+    }
+
+    .Box3-id-2 .Main3-h3, .Box3-id-3 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
+        font-size: 10px;
+    }
+
+    .Box3-id-1 .Label3, .Box3-id-2 .Label3, .Box3-id-3 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+        font-size: 14px;
     }
     
     .Circle3 > h4 {
@@ -289,16 +361,13 @@
     .Box3 {
         padding: 1em;
     }
-    .Label3 {
-        font-size: 12px;
-    }
-    .Main3-h3 {
-        font-size: 8px;
+    .Box3-id-3 {
+        justify-content: center;
     }
     .Circle3 {
-        height: 5em;
-        width: 5em;
-        margin: .5em;
+        height: 4em;
+        width: 4em;
+        margin-bottom: .5em;
     }
     .Circle3::before {
         top: 10%;
@@ -306,8 +375,16 @@
         width: 80%;
         height: 80%;
     }
+
+    .Box3-id-2 .Main3-h3, .Box3-id-3 .Main3-h3, .Box3-id-4 .Main3-h3, .Box3-id-5 .Main3-h3 {
+        font-size: 8px;
+    }
+
+    .Box3-id-1 .Label3, .Box3-id-2 .Label3, .Box3-id-3 .Label3, .Box3-id-4 .Label3, .Box3-id-5 .Label3 {
+        font-size: 12px;
+    }
     
     .Circle3 > h4 {
-        font-size: 26px;
+        font-size: 22px;
     }
 }

@@ -1,13 +1,13 @@
-.Main-style {
+.Main-style13 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 2.5em;
 }
 
-.Main-title {
+.Main-title13 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,7 +21,7 @@
     margin-left: .5em;
 }
 
-.Main-title > h2 {
+.Main-title13 > h2 {
     font-size: 24px;
     font-weight: 600;
     display: flex;
@@ -29,30 +29,25 @@
     align-items: center;
 }
 
-.Main-title > p {
+.Main-title13 > p {
     font-size: 14px;
 }
 
-.Box {
+.Box13 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    margin-left: 5em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.Main-h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin: auto;
+.Main13-h3 {
+    display: none;
 }
 
-.Circle {
+.Circle13 {
     position: relative;
     height: 8em;
     width: 8em;
@@ -81,7 +76,7 @@
 
 /* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
 
-.Circle::before {
+.Circle13::before {
     content: '';
     position: absolute;
     top: 10%;
@@ -93,7 +88,7 @@
     z-index: 1;
 }
 
-.Circle > h4 {
+.Circle13 > h4 {
     font-size: 40px;
     font-weight: 100;
     position: relative;
@@ -101,8 +96,9 @@
     color: blue;
 }
 
-.Label {
-    font-size: 28px;
+.Label13 {
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .line {
@@ -111,14 +107,14 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1860px) {
-    .Main-style {
+@media (max-width: 1800px) {
+    .Main-style13 {
         width: 100%;
         height: 100%;
-        justify-content: space-around;
+        justify-content: flex-start;
         gap: 2em;
     }
-    .Main-title {
+    .Main-title13 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -126,122 +122,111 @@
         width: 95%;
         margin: auto;
     }
-    .Main-title > h2 {
+    .Main-title13 > h2 {
         font-size: 22px;
     }
-    .Circle {
-        height: 7.5em;
-        width: 7.5em;
+    .Circle13 {
+        height: 7.8em;
+        width: 7.8em;
     }
-    .Circle::before {
+    .Circle13::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
-    .Label {
-        font-size: 22px;
+    .Label13 {
+        font-size: 24px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+
 }
 
 @media (max-width: 1300px) {
-    .Main-style {
+    .Main-style13 {
         width: 100%;
         height: 100%;
         
     }
-    .Main-title > h2 {
-    font-size: 18px;
-    font-weight: 600;
+    .Main-title13 > h2 {
+        font-size: 18px;
+        font-weight: 600;
     }
-    .Main-title > p {
-    font-size: 12px;
+    .Main-title13 > p {
+        font-size: 12px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .Main13-h3 {
+        font-size: 26px;
     }
-    .Label {
+    .Label13 {
         font-size: 16px;
     }
-    .Circle {
-        height: 6em;
-        width: 6em;
+    .Circle13 {
+        height: 7em;
+        width: 7em;
     }
-    .Circle::before {
+    .Circle13::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
-        font-size: 36px;
+    .Circle13 > h4 {
+        font-size: 38px;
     }
 }
 
 
 
 @media (max-width: 1000px) {
-    .Main-style {
+    .Main-style13 {
         width: 100%;
         height: 100%;
     }
-    .Main-title {
+    .Main-title13 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
+        width: 92%;
         margin: auto;
     }
-    .Main-title > h2 {
-    font-size: 16px;
-    font-weight: 600;
+    .Main-title13 > h2 {
+        font-size: 16px;
+        font-weight: 600;
     }
-    .Main-title > p {
-    font-size: 12px;
+    .Main-title13 > p {
+        font-size: 12px;
     }
-    .Box {
-        margin: 0em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    
+    .Label13 {
+        font-size: 12px;
     }
-    .Label {
-        font-size: 14px;
+    .Circle13 {
+        height: 6em;
+        width: 6em;
     }
-    .Circle {
-        height: 4em;
-        width: 4em;
-    }
-    .Circle::before {
+    .Circle13::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
-        font-size: 24px;
+    .Circle13 > h4 {
+        font-size: 34px;
     }
 }
 
 @media (max-width: 850px) {
-    .Main-style {
+    .Main-style13 {
         width: 100%;
         height: 100%;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
     }
-
-    .Main-title {
+    .Main-title13 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -249,47 +234,47 @@
         width: 95%;
         margin: auto;
     }
-
-    .Main-title > h2 {
+    .Main-title13 > h2 {
         font-size: 12px;
         font-weight: 600;
         flex-direction: column;
         align-items: flex-start;
     }
-    .Main-title > p {
+    .Main-title13 > p {
         font-size: 14px;
     }
-    .Main-h3 {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    .Main13-h3 {
+        font-size: 26px;
+        margin-bottom: 0;
+        text-align: center;
     }
     .dynamicHeading {
         margin-left: 0em;
     }
-    .Box {
+    .Box13 {
         margin: 0em;
         margin-top: 1em;
         margin-bottom: 1em;
         flex-direction: column;
     }
-    .Label {
-        font-size: 18px;
+    .Label13 {
+        font-size: 26px;
+        flex-wrap: wrap;
+        text-align: center;
     }
-    .Circle {
-        height: 5em;
-        width: 5em;
+    .Circle13 {
+        height: 7.5em;
+        width: 7.5em;
         margin: .5em;
     }
-    .Circle::before {
+    .Circle13::before {
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
     }
     
-    .Circle > h4 {
-        font-size: 26px;
+    .Circle13 > h4 {
+        font-size: 40px;
     }
 }
-

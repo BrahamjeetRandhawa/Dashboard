@@ -27,6 +27,8 @@
     align-items: center;
     background-color: royalblue;
     width: 30%;
+    transition-property: all;
+    transition-delay: 1s;
 }
 
 
@@ -49,7 +51,7 @@
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .Topbar {
         height: 6em;
     }

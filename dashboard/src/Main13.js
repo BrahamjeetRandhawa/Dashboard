@@ -1,13 +1,22 @@
-import "./Mainstyle.css";
-import React, { Fragment } from "react";
+import "./Mainstyle13.css";
+import React, { useEffect, useState, Fragment } from "react";
+import axios from "axios";
 // import Filter from "./Filter";
 
-function Main({ financials }) {
+function Main13() {
 
+    const [engineerUpskilling, setEngineerUpskilling] = useState([])
+
+
+    useEffect(() => {
+    axios.get("http://localhost:5500/api/data")
+  .then(res => setEngineerUpskilling(res.data.engineerUpskilling))
+  .catch(err => console.error(err));
+  },[]);
  
   const groupedData = [];
-  for (let i = 0; i < financials.length; i += 3) {
-    groupedData.push(financials.slice(i, i + 3));
+  for (let i = 0; i < engineerUpskilling.length; i += 1) {
+    groupedData.push(engineerUpskilling.slice(i, i + 1));
   }
 
   // const colors = ["#ffff00", "#ff0000", "#0000ff"];
@@ -16,11 +25,11 @@ function Main({ financials }) {
  
 
   return (
-    <div className="Main-style">
+    <div className="Main-style13">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
-        <div className="Main-title">
-            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
-            <p>Source: PP</p>
+        <div className="Main-title13">
+            <h2>ENGINEER DELIGHT <span className="dynamicHeading">{engineerUpskilling[0]?.heading}</span></h2>
+            <p>Source: Demand Tracker</p>
         </div>
 
         {groupedData.map((group, groupIndex) => {
@@ -31,18 +40,19 @@ function Main({ financials }) {
         };
          return (
         <Fragment key={groupIndex}>
-          <h3 className="Main-h3">{group[0]?.title || `Group ${groupIndex + 1}`}</h3>
+          
           {group.map((item, index) => (
 
-        <div className="Box" key={item.id}>
-          <div className="Circle"
+        <div className="Box13" key={item.id}>
+          <div className="Circle13"
           style={{
             "--color": color(item.percentage),
             "--target-percentage": `${item.percentage * 3.6}deg`
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <p className="Label">{item.label}</p>
+          <h3 className="Main13-h3">{group[0]?.title}</h3>
+          <p className="Label13">{item.label}</p>
         </div>
 
       ))}
@@ -56,4 +66,4 @@ function Main({ financials }) {
 }
         
 
-export default Main;
+export default Main13;

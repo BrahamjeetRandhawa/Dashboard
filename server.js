@@ -34,10 +34,51 @@ app.get('/api/data', (req, res) => {
     const fulfilmentViewSheet = workbook.Sheets['Fulfilment_view'];
     const fulfilmentViewData = xlsx.utils.sheet_to_json(fulfilmentViewSheet);
 
+    // Thought Leadership Demonstration uitlezen
+    const thoughtLeadershipSheet = workbook.Sheets['Thought_leadership'];
+    const thoughtLeadershipData = xlsx.utils.sheet_to_json(thoughtLeadershipSheet);
+
+    // North Star POD uitlezen
+    const nortStarSheet = workbook.Sheets['North_star'];
+    const northStarData = xlsx.utils.sheet_to_json(nortStarSheet);
+
+    // GTM improvement focus uitlezen
+    const gtmImprovementSheet = workbook.Sheets['GTM_improvement'];
+    const gtmImprovementData = xlsx.utils.sheet_to_json(gtmImprovementSheet);
+
+    // Operations HCLTech Specific uitlezen
+    const operationsHCLTechSheet = workbook.Sheets['Operations_hcltech'];
+    const operationsHCLTechData = xlsx.utils.sheet_to_json(operationsHCLTechSheet);
+
+    // Customer Delight uitlezen
+    const customerDelightSheet = workbook.Sheets['Customer_delight'];
+    const customerDelightData = xlsx.utils.sheet_to_json(customerDelightSheet);
+
+    // Engineer Delight uitlezen
+    const engineerDelightSheet = workbook.Sheets['Engineer_delight'];
+    const engineerDelightData = xlsx.utils.sheet_to_json(engineerDelightSheet);
+
+    // Engineer Upskilling uitlezen
+    const engineerUpskillingSheet = workbook.Sheets['Engineer_upskilling'];
+    const engineerUpskillingData = xlsx.utils.sheet_to_json(engineerUpskillingSheet);
+
+    // Governance Customer uitlezen
+    const governanceCustomerSheet = workbook.Sheets['Governance_customer'];
+    const governanceCustomerData = xlsx.utils.sheet_to_json(governanceCustomerSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
-        fulfilmentView: fulfilmentViewData
+        fulfilmentView: fulfilmentViewData,
+        thoughtLeadership: thoughtLeadershipData,
+        northStar: northStarData,
+        gtmImprovement: gtmImprovementData,
+        operationsHcltech: operationsHCLTechData,
+        customerDelight: customerDelightData,
+        engineerDelight: engineerDelightData,
+        engineerUpskilling: engineerUpskillingData,
+        governanceCustomer: governanceCustomerData
+
     });
 });
 

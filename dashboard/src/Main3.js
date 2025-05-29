@@ -47,7 +47,7 @@ function Main3() {
         }}>
             <h4>{item.percentage}</h4>
           </div>
-          <div className="Text-container2">
+          <div className="Text-container3">
           <h3 className="Main3-h3">{item.title}</h3>
           <p className="Label3">{item.label}</p>
           </div>
