@@ -90,8 +90,10 @@
 
 .Circle10 > h4 {
     font-size: 40px;
+    font-weight: 100;
     position: relative;
     z-index: 2;
+    color: blue;
 }
 
 .Label10 {
