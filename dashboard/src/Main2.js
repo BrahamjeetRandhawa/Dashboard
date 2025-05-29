@@ -32,11 +32,6 @@ function Main2() {
 
         <div className="Main2-grid">
         {data.map((item) => {
-          const color = (percentage) => {
-          if (percentage >= 100) return "#00cc66";
-          if (percentage >= 95) return "#ffcc00";
-          return "#ff0000";
-        };
 
          return (
           
