@@ -48,6 +48,12 @@ label {
     flex-wrap: wrap;
 }
 
+.Filter_button.clicked {
+    background: linear-gradient(to right, royalblue 30%, lightblue 70%) left;
+    transition: 0.5s ease-in-out;
+    animation-duration: 1s;
+}
+
 @media (max-width: 1600px) {
     .Filter {
         flex-direction: row;

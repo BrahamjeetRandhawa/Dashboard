@@ -1,5 +1,6 @@
 import './Filterstyle.css';
 
+import { useState } from 'react';
 
 function Filter({ filters, setFilters, options, onFilterApply }) {
     const handleChange = (e) => {
@@ -9,9 +10,17 @@ function Filter({ filters, setFilters, options, onFilterApply }) {
             [name]: value,
         }));
     };
+
+    const [clicked, setClicked] = useState(false);
     
     const handleApply = () => {
+        setClicked(true);
         onFilterApply(filters);
+    
+
+    setTimeout(() => {
+        setClicked(false);
+        }, 1000);
     };
 
     if (!options) return null;
@@ -29,7 +38,7 @@ function Filter({ filters, setFilters, options, onFilterApply }) {
             </select>
             </div>
             ))}
-            <button className="Filter_button" onClick={handleApply}>Filter</button>
+            <button className={`Filter_button ${clicked ? 'clicked' : ''}`} onClick={handleApply}>Filter</button>
 
             </div>
     );
