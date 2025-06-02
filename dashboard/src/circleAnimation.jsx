@@ -4,22 +4,34 @@ import React, { useEffect, useState } from "react";
 
 function CircleAnimation({ percentage }) {
     const [angle, setAngle] = useState(0);
+    const [displayNumber, setDisplayNumber] = useState(0);
 
     useEffect(() => {
-        let Current = 0;
-        const Target = percentage * 3.6;
+        let currentAngle = 0;
+        let currentNumber = 0;
+        const targetAngle = percentage * 3.6;
         const Step = 3;
 
         let animationFrameId;
         
         const animate = () => {
-            Current += Step;
-            if (Current >= Target) {
-                Current = Target;
-            } else {
+            let updated = false;
+            
+            if (currentAngle < targetAngle) {
+                currentAngle += Step;
+                if (currentAngle > targetAngle) currentAngle = targetAngle;
+                setAngle(currentAngle);
+                updated = true;
+            }
+            if (currentNumber < percentage) {
+                currentNumber += 1;
+                if (currentNumber > percentage) currentNumber = percentage;
+                setDisplayNumber(currentNumber);
+                updated = true;
+            }
+            if (updated) {
                 animationFrameId = requestAnimationFrame(animate);
             }
-            setAngle(Current);
         };
     
     animationFrameId = requestAnimationFrame(animate);
@@ -35,7 +47,7 @@ function CircleAnimation({ percentage }) {
             style={{
                 background: `conic-gradient(${color} ${angle}deg, #eee ${angle}deg)`,
             }}>
-                <h4>{percentage}</h4>
+                <h4>{displayNumber}</h4>
             </div>
         );
 }
