@@ -1,4 +1,5 @@
 import "./Mainstyle6.css";
+import CircleAnimation from "./circleAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
@@ -33,24 +34,13 @@ function Main6() {
         </div>
 
         {groupedData.map((group, groupIndex) => {
-          const color = (percentage) => {
-          if (percentage >= 100) return "#00cc66";
-          if (percentage >= 95) return "#ffcc00";
-          return "#ff0000";
-        };
          return (
         <Fragment key={groupIndex}>
           
           {group.map((item, index) => (
 
         <div className="Box6" key={item.id}>
-          <div className="Circle6"
-          style={{
-            "--color": color(item.percentage),
-            "--target-percentage": `${item.percentage * 3.6}deg`
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
+          <CircleAnimation percentage={item.percentage} />
           <h3 className="Main6-h3">{group[0]?.title}</h3>
           <p className="Label6">{item.label}</p>
         </div>

@@ -1,5 +1,7 @@
 
 import "./Mainstyle2.css";
+import CircleAnimation from "./circleAnimation";
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -30,23 +32,12 @@ function Main2() {
 
         <div className="Main2-grid">
         {data.map((item) => {
-          const color = (percentage) => {
-          if (percentage >= 100) return "#00cc66";
-          if (percentage >= 95) return "#ffcc00";
-          return "#ff0000";
-        };
 
          return (
           
         <div className={`Box2 Box2-id-${item.id}`} key={item.id}>
           
-          <div className="Circle2"
-          style={{
-            "--color": color(item.percentage),
-            "--target-percentage": `${item.percentage * 3.6}deg`
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
+          <CircleAnimation percentage={item.percentage} />
           <div className="Text-container2">
           <h3 className="Main2-h3">{item.title}</h3>
           <p className="Label2">{item.label}</p>
