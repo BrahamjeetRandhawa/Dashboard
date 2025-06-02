@@ -1,4 +1,5 @@
 import "./Mainstyle14.css";
+import CircleAnimation from "./circleAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
@@ -44,13 +45,7 @@ function Main14() {
           {group.map((item, index) => (
 
         <div className="Box14" key={item.id}>
-          <div className="Circle14"
-          style={{
-            "--color": color(item.percentage),
-            "--target-percentage": `${item.percentage * 3.6}deg`
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
+          <CircleAnimation percentage={item.percentage} />
           <h3 className="Main14-h3">{group[0]?.title}</h3>
           <p className="Label14">{item.label}</p>
         </div>
