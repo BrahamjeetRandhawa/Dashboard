@@ -34,7 +34,7 @@ function App() {
       YEAR: "2020-2021",
       CLUSTER: "UKISA",
       "ACCOUNT NAME": "Finastra",
-      LOCATION: "Onsite",
+      LOCATION: "Offshore",
     });
   
     const [options, setOptions] = useState({
