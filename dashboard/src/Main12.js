@@ -1,5 +1,6 @@
 import "./Mainstyle12.css";
 import CircleAnimation from "./circleAnimation";
+import TypingHeading from "./textAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
@@ -29,7 +30,7 @@ function Main12() {
     <div className="Main-style12">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title12">
-            <h2>ENGINEER DELIGHT <span className="dynamicHeading">{engineerDelight[0]?.heading}</span></h2>
+            <h2>ENGINEER DELIGHT <TypingHeading text={engineerDelight[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 

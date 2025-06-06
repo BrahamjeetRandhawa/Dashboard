@@ -1,5 +1,6 @@
 import "./Mainstyle.css";
 import CircleAnimation from "./circleAnimation";
+import TypingHeading from "./textAnimation";
 import React, { Fragment } from "react";
 // import Filter from "./Filter";
 
@@ -20,7 +21,7 @@ function Main({ financials }) {
     <div className="Main-style">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title">
-            <h2>FINANCIALS <span className="dynamicHeading">{financials[0]?.heading}</span></h2>
+            <h2>Financials<TypingHeading text={financials[0]?.heading || ""} speed={75} /></h2>
             <p>Source: PP</p>
         </div>
 

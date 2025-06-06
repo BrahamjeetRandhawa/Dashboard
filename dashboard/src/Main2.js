@@ -1,6 +1,7 @@
 
 import "./Mainstyle2.css";
 import CircleAnimation from "./circleAnimation";
+import TypingHeading from "./textAnimation";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -26,7 +27,7 @@ function Main2() {
   return (
     <div className="Main-style2">
         <div className="Main-title2">
-            <h2>Demand View <span className="dynamicHeading">{demandView[0]?.heading}</span></h2>
+            <h2>Demand View <TypingHeading text={demandView[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 

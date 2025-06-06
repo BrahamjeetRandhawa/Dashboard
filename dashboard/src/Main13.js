@@ -1,5 +1,7 @@
 import "./Mainstyle13.css";
 import React, { useEffect, useState, Fragment } from "react";
+import TypingHeading from "./textAnimation";
+import CircleAnimation from "./circleAnimation";
 import axios from "axios";
 // import Filter from "./Filter";
 
@@ -28,7 +30,7 @@ function Main13() {
     <div className="Main-style13">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title13">
-            <h2>ENGINEER DELIGHT <span className="dynamicHeading">{engineerUpskilling[0]?.heading}</span></h2>
+            <h2>ENGINEER DELIGHT <TypingHeading text={engineerUpskilling[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 
@@ -44,13 +46,7 @@ function Main13() {
           {group.map((item, index) => (
 
         <div className="Box13" key={item.id}>
-          <div className="Circle13"
-          style={{
-            "--color": color(item.percentage),
-            "--target-percentage": `${item.percentage * 3.6}deg`
-        }}>
-            <h4>{item.percentage}</h4>
-          </div>
+          <CircleAnimation percentage={item.percentage} />
           <h3 className="Main13-h3">{group[0]?.title}</h3>
           <p className="Label13">{item.label}</p>
         </div>

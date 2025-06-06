@@ -1,5 +1,6 @@
 import "./Mainstyle7.css";
 import CircleAnimation from "./circleAnimation";
+import TypingHeading from "./textAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
@@ -29,7 +30,7 @@ function Main7() {
     <div className="Main-style7">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title7">
-            <h2>GTM IMPROVEMENT FOCUS <span className="dynamicHeading">{gtmImprovement[0]?.heading}</span></h2>
+            <h2>GTM IMPROVEMENT FOCUS <TypingHeading text={gtmImprovement[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 

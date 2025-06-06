@@ -1,5 +1,6 @@
 import "./Mainstyle9.css";
 import CircleAnimation from "./circleAnimation";
+import TypingHeading from "./textAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 // import Filter from "./Filter";
@@ -29,7 +30,7 @@ function Main9() {
     <div className="Main-style9">
       {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title9">
-            <h2>OPERATIONS - HCLTECH SPEC <span className="dynamicHeading">{operationsHcltech[0]?.heading}</span></h2>
+            <h2>OPERATIONS - HCLTECH SPEC <TypingHeading text={operationsHcltech[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 
