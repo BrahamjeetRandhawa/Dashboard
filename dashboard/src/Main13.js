@@ -35,11 +35,7 @@ function Main13() {
         </div>
 
         {groupedData.map((group, groupIndex) => {
-          const color = (percentage) => {
-          if (percentage >= 100) return "#00cc66";
-          if (percentage >= 95) return "#ffcc00";
-          return "#ff0000";
-        };
+          
          return (
         <Fragment key={groupIndex}>
           
