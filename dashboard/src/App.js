@@ -34,7 +34,7 @@ function App() {
       YEAR: "2020-2021",
       CLUSTER: "UKISA",
       "ACCOUNT NAME": "Finastra",
-      LOCATION: "Onsite",
+      LOCATION: "Offshore",
     });
   
     const [options, setOptions] = useState({
@@ -67,6 +67,9 @@ function App() {
     // const filteredFinancials = financials.filter((item) => 
     // Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
 
+
+
+
     const applyFilters = () => {
       const noFiltersSelected = Object.values(filters).every(val => !val);
 
@@ -81,6 +84,23 @@ function App() {
         setFilteredFinancials(filtered);
       }
     };
+
+
+
+
+    // const applyFilters = () => {
+    //   const activeFilters = Object.fromEntries(
+    //     Object.entries(filters).filter(([_, val]) => val && val !== "All")
+    //   );
+
+    //   const filtered = financials.filter(item =>
+    //     Object.entries(activeFilters).every(([key, val]) =>
+    //     String(item[key]).trim() === String(val).trim()
+    // )
+    //   );
+    //   setFilteredFinancials(filtered);
+    // };
+
 
     // const noFiltersSelected = Object.values(filters).every(val => val);
 

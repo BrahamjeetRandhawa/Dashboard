@@ -3,6 +3,8 @@ import "./Mainstyle3.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import TypingHeading from "./textAnimation";
+
 function Main3() {
 
   const [fulfilmentView, setFulfilmentView] = useState([]);
@@ -24,7 +26,7 @@ function Main3() {
   return (
     <div className="Main-style3">
         <div className="Main-title3">
-            <h2>Fulfilment View <span className="dynamicHeading">{fulfilmentView[0]?.heading}</span></h2>
+            <h2>Fulfilment View <TypingHeading text={fulfilmentView[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>
         </div>
 

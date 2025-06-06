@@ -20,8 +20,7 @@ function Filter({ filters, setFilters, options, onFilterApply }) {
             {Object.keys(options).map((key) => (
             <div key={key} className="Filter_title">
             <label htmlFor={key}>{key.toUpperCase()}</label>
-            <select name={key} id={key} className='Filter_select' value={filters[key] || ''} onChange={handleChange}>
-                {options[key].map((val) => (
+            <select name={key} id={key} className='Filter_select' value={filters[key] || ''} onChange={handleChange}>                {options[key].map((val) => (
                     <option key={val} value={val}>
                         {val}
                     </option>
