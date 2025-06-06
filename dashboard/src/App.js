@@ -30,11 +30,11 @@ function App() {
   const [filteredFinancials, setFilteredFinancials] = useState([]);
   
     const [filters, setFilters] = useState({
-      PERIOD: "All",
-      YEAR: "All",
-      CLUSTER: "All",
-      "ACCOUNT NAME": "All",
-      LOCATION: "All",
+      PERIOD: "2020",
+      YEAR: "2020-2021",
+      CLUSTER: "UKISA",
+      "ACCOUNT NAME": "Finastra",
+      LOCATION: "Onsite",
     });
   
     const [options, setOptions] = useState({
@@ -70,36 +70,36 @@ function App() {
 
 
 
-    // const applyFilters = () => {
-    //   const noFiltersSelected = Object.values(filters).every(val => !val);
-
-    //   if (noFiltersSelected) {
-    //     setFilteredFinancials(financials.slice(0, 9));
-    //   } else {
-    //     const filtered = financials.filter(item =>
-    //       Object.entries(filters).every(([key, val]) =>
-    //       !val || String(item[key]).trim() === String(val).trim()
-    //   )
-    //     );
-    //     setFilteredFinancials(filtered);
-    //   }
-    // };
-
-
-
-
     const applyFilters = () => {
-      const activeFilters = Object.fromEntries(
-        Object.entries(filters).filter(([_, val]) => val && val !== "All")
-      );
+      const noFiltersSelected = Object.values(filters).every(val => !val);
 
-      const filtered = financials.filter(item =>
-        Object.entries(activeFilters).every(([key, val]) =>
-        String(item[key]).trim() === String(val).trim()
-    )
-      );
-      setFilteredFinancials(filtered);
+      if (noFiltersSelected) {
+        setFilteredFinancials(financials.slice(0, 9));
+      } else {
+        const filtered = financials.filter(item =>
+          Object.entries(filters).every(([key, val]) =>
+          !val || String(item[key]).trim() === String(val).trim()
+      )
+        );
+        setFilteredFinancials(filtered);
+      }
     };
+
+
+
+
+    // const applyFilters = () => {
+    //   const activeFilters = Object.fromEntries(
+    //     Object.entries(filters).filter(([_, val]) => val && val !== "All")
+    //   );
+
+    //   const filtered = financials.filter(item =>
+    //     Object.entries(activeFilters).every(([key, val]) =>
+    //     String(item[key]).trim() === String(val).trim()
+    // )
+    //   );
+    //   setFilteredFinancials(filtered);
+    // };
 
 
     // const noFiltersSelected = Object.values(filters).every(val => val);
