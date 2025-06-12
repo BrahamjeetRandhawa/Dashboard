@@ -1,0 +1,279 @@
+.Main-style11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+.Main-title11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.dynamicHeading {
+    color: lightseagreen;
+    margin-left: .5em;
+}
+
+.Main-title11 > h2 {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-title11 > p {
+    font-size: 14px;
+}
+
+.Box11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.Main11-h3 {
+    display: none;
+}
+
+.Circle11 {
+    position: relative;
+    height: 8em;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 1.5em;
+    animation: fillCircle 2s ease forwards;
+    --percentage: 0deg;
+
+    background: conic-gradient(var(--color, #00bfff) var(--percentage, 0deg), #eee 0deg);
+}
+
+
+
+@keyframes fillCircle {
+    0% {
+        background: conic-gradient(var(--color, #00bfff) 0deg, #eee 0deg);
+    }
+
+    100% {
+        background: conic-gradient(var(--color, #00bfff) var(--target-percentage, 0deg), #eee 0deg);
+    }
+}
+
+/* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
+
+.Circle11::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.Circle11 > h4 {
+    font-size: 40px;
+    font-weight: 100;
+    position: relative;
+    z-index: 2;
+    color: blue;
+}
+
+.Label11 {
+    font-size: 34px;
+}
+
+.line {
+    width: 95%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1800px) {
+    .Main-style11 {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+    .Main-title11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+    .Main-title11 > h2 {
+        font-size: 22px;
+    }
+    .Circle11 {
+        height: 7.8em;
+        width: 7.8em;
+    }
+    .Circle11::before {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    .Label11 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .Main-style11 {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .Main-title11 > h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .Main-title11 > p {
+        font-size: 12px;
+    }
+    .Main11-h3 {
+        font-size: 26px;
+    }
+    .Label11 {
+        font-size: 26px;
+    }
+    .Circle11 {
+        height: 7em;
+        width: 7em;
+    }
+    .Circle11::before {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .Circle11 > h4 {
+        font-size: 38px;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .Main-style11 {
+        width: 100%;
+        height: 100%;
+    }
+    .Main-title11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 92%;
+        margin: auto;
+    }
+    .Main-title11 > h2 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .Main-title11 > p {
+        font-size: 12px;
+    }
+    
+    .Label11 {
+        font-size: 24px;
+    }
+    .Circle11 {
+        height: 6em;
+        width: 6em;
+    }
+    .Circle11::before {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .Circle11 > h4 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 850px) {
+    .Main-style11 {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .Main-title11 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 95%;
+        margin: auto;
+    }
+    .Main-title11 > h2 {
+        font-size: 12px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Main-title11 > p {
+        font-size: 14px;
+    }
+    .Main11-h3 {
+        font-size: 26px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .dynamicHeading {
+        margin-left: 0em;
+    }
+    .Box11 {
+        margin: 0em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        flex-direction: column;
+    }
+    .Label11 {
+        font-size: 26px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .Circle11 {
+        height: 7.5em;
+        width: 7.5em;
+        margin: .5em;
+    }
+    .Circle11::before {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .Circle11 > h4 {
+        font-size: 40px;
+    }
+}

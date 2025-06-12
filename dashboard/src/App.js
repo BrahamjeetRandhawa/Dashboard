@@ -19,7 +19,7 @@ import Main7 from './Main7'; // Import the Main7 component
 import Main8 from './Main8'; // Import the Main8 component
 import Main9 from './Main9'; // Import the Main9 component
 import Main10 from './Main10'; // Import the Main10 component
-
+import Main11 from './Main11'; // Import the Main11 component
 import Main12 from './Main12'; // Import the Main12 component
 import Main13 from './Main13'; // Import the Main13 component
 import Main14 from './Main14'; // Import the Main14 component
@@ -132,7 +132,7 @@ function App() {
               <Route path="/operations_Customer" element={<Main8 />} />
               <Route path="/operations_Hcltech" element={<Main9 />} />
               <Route path="/customer_Delight" element={<Main10 />} />
-
+              <Route path="/dex" element={<Main11 />} />
               <Route path="/engineer_Delight" element={<Main12 />} />
               <Route path="/engineer_Upskilling" element={<Main13 />} />
               <Route path="/governance_Customer" element={<Main14 />} />

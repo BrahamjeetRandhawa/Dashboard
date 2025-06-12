@@ -62,6 +62,10 @@ app.get('/api/data', (req, res) => {
     const customerDelightSheet = workbook.Sheets['Customer_delight'];
     const customerDelightData = xlsx.utils.sheet_to_json(customerDelightSheet);
 
+    // Dex uitlezen
+    const dexSheet = workbook.Sheets['dex'];
+    const dexData = xlsx.utils.sheet_to_json(dexSheet);
+
     // Engineer Delight uitlezen
     const engineerDelightSheet = workbook.Sheets['Engineer_delight'];
     const engineerDelightData = xlsx.utils.sheet_to_json(engineerDelightSheet);
@@ -85,6 +89,7 @@ app.get('/api/data', (req, res) => {
         operationsCustomer: operationsCustomerData,
         operationsHcltech: operationsHCLTechData,
         customerDelight: customerDelightData,
+        dex: dexData,
         engineerDelight: engineerDelightData,
         engineerUpskilling: engineerUpskillingData,
         governanceCustomer: governanceCustomerData

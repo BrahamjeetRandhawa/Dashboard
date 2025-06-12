@@ -18,7 +18,7 @@ function Sidebar() {
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/operations_Customer" className={({ isActive }) => isActive ? "active-link" : ""}>OPERATIONS-CUSTOMER SPECIFIC</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/operations_Hcltech" className={({ isActive }) => isActive ? "active-link" : ""}>OPERATIONS - HCLTECH SPECIFIC</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/customer_Delight" className={({ isActive }) => isActive ? "active-link" : ""}>CUSTOMER DELIGHT</NavLink></li>
-        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#DEX" className={({ isActive }) => isActive ? "active-link" : ""}>DEX</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/dex" className={({ isActive }) => isActive ? "active-link" : ""}>DEX</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Delight" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER DELIGHT</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Upskilling" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER UPSKILLING</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/governance_Customer" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE - CUSTOMER FACING</NavLink></li>
