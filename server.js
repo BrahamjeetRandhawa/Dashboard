@@ -78,6 +78,10 @@ app.get('/api/data', (req, res) => {
     const governanceCustomerSheet = workbook.Sheets['Governance_customer'];
     const governanceCustomerData = xlsx.utils.sheet_to_json(governanceCustomerSheet);
 
+    // Governance Internal uitlezen
+    const governanceInternalSheet = workbook.Sheets['Governance_internal'];
+    const governanceInternalData = xlsx.utils.sheet_to_json(governanceInternalSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
@@ -92,7 +96,8 @@ app.get('/api/data', (req, res) => {
         dex: dexData,
         engineerDelight: engineerDelightData,
         engineerUpskilling: engineerUpskillingData,
-        governanceCustomer: governanceCustomerData
+        governanceCustomer: governanceCustomerData,
+        governanceInternal: governanceInternalData
 
     });
 });

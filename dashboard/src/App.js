@@ -23,6 +23,7 @@ import Main11 from './Main11'; // Import the Main11 component
 import Main12 from './Main12'; // Import the Main12 component
 import Main13 from './Main13'; // Import the Main13 component
 import Main14 from './Main14'; // Import the Main14 component
+import Main15 from './Main15'; // Import the Main15 component
 
 function App() {
 
@@ -136,6 +137,8 @@ function App() {
               <Route path="/engineer_Delight" element={<Main12 />} />
               <Route path="/engineer_Upskilling" element={<Main13 />} />
               <Route path="/governance_Customer" element={<Main14 />} />
+              <Route path="/governance_Internal" element={<Main15 />} /> {/* Assuming Main14 is used for both */}
+              <Route path="*" element={<div>Page Not Found</div>} /> {/* Fallback route for unmatched paths */}
             </Routes>
           </div>
         </div>

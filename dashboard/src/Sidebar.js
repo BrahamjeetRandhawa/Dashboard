@@ -22,7 +22,7 @@ function Sidebar() {
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Delight" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER DELIGHT</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/engineer_Upskilling" className={({ isActive }) => isActive ? "active-link" : ""}>ENGINEER UPSKILLING</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/governance_Customer" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE - CUSTOMER FACING</NavLink></li>
-        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#GOVERNANCE-INTERNAL FACING" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE-INTERNAL FACING</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/governance_Internal" className={({ isActive }) => isActive ? "active-link" : ""}>GOVERNANCE - INTERNAL FACING</NavLink></li>
       </ul>
     </nav>
   );
