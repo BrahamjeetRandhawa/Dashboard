@@ -34,6 +34,10 @@ app.get('/api/data', (req, res) => {
     const fulfilmentViewSheet = workbook.Sheets['Fulfilment_view'];
     const fulfilmentViewData = xlsx.utils.sheet_to_json(fulfilmentViewSheet);
 
+    // Client Partner Focus uitlezen
+    const clientPartnerSheet = workbook.Sheets['Client_partner'];
+    const clientPartnerData = xlsx.utils.sheet_to_json(clientPartnerSheet);
+
     // Thought Leadership Demonstration uitlezen
     const thoughtLeadershipSheet = workbook.Sheets['Thought_leadership'];
     const thoughtLeadershipData = xlsx.utils.sheet_to_json(thoughtLeadershipSheet);
@@ -46,6 +50,10 @@ app.get('/api/data', (req, res) => {
     const gtmImprovementSheet = workbook.Sheets['GTM_improvement'];
     const gtmImprovementData = xlsx.utils.sheet_to_json(gtmImprovementSheet);
 
+    // Operations Customer Specific uitlezen
+    const operationsCustomerSheet = workbook.Sheets['Operations_customer'];
+    const operationsCustomerData = xlsx.utils.sheet_to_json(operationsCustomerSheet);
+
     // Operations HCLTech Specific uitlezen
     const operationsHCLTechSheet = workbook.Sheets['Operations_hcltech'];
     const operationsHCLTechData = xlsx.utils.sheet_to_json(operationsHCLTechSheet);
@@ -53,6 +61,10 @@ app.get('/api/data', (req, res) => {
     // Customer Delight uitlezen
     const customerDelightSheet = workbook.Sheets['Customer_delight'];
     const customerDelightData = xlsx.utils.sheet_to_json(customerDelightSheet);
+
+    // Dex uitlezen
+    const dexSheet = workbook.Sheets['dex'];
+    const dexData = xlsx.utils.sheet_to_json(dexSheet);
 
     // Engineer Delight uitlezen
     const engineerDelightSheet = workbook.Sheets['Engineer_delight'];
@@ -66,18 +78,26 @@ app.get('/api/data', (req, res) => {
     const governanceCustomerSheet = workbook.Sheets['Governance_customer'];
     const governanceCustomerData = xlsx.utils.sheet_to_json(governanceCustomerSheet);
 
+    // Governance Internal uitlezen
+    const governanceInternalSheet = workbook.Sheets['Governance_internal'];
+    const governanceInternalData = xlsx.utils.sheet_to_json(governanceInternalSheet);
+
     res.json({
         financials: financialData,
         demandView: demandViewData,
         fulfilmentView: fulfilmentViewData,
+        clientPartner: clientPartnerData,
         thoughtLeadership: thoughtLeadershipData,
         northStar: northStarData,
         gtmImprovement: gtmImprovementData,
+        operationsCustomer: operationsCustomerData,
         operationsHcltech: operationsHCLTechData,
         customerDelight: customerDelightData,
+        dex: dexData,
         engineerDelight: engineerDelightData,
         engineerUpskilling: engineerUpskillingData,
-        governanceCustomer: governanceCustomerData
+        governanceCustomer: governanceCustomerData,
+        governanceInternal: governanceInternalData
 
     });
 });

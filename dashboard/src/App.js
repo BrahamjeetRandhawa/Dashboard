@@ -12,17 +12,18 @@ import Filter from './Filter'; // Import the Filter component
 import Main from './Main'; // Import the Main component
 import Main2 from './Main2'; // Import the Main2 component
 import Main3 from './Main3'; // Import the Main3 component
-
+import Main4 from './Main4'; // Import the Main4 component
 import Main5 from './Main5'; // Import the Main5 component
 import Main6 from './Main6'; // Import the Main6 component
 import Main7 from './Main7'; // Import the Main7 component
-
+import Main8 from './Main8'; // Import the Main8 component
 import Main9 from './Main9'; // Import the Main9 component
 import Main10 from './Main10'; // Import the Main10 component
-
+import Main11 from './Main11'; // Import the Main11 component
 import Main12 from './Main12'; // Import the Main12 component
 import Main13 from './Main13'; // Import the Main13 component
 import Main14 from './Main14'; // Import the Main14 component
+import Main15 from './Main15'; // Import the Main15 component
 
 function App() {
 
@@ -125,17 +126,19 @@ function App() {
               <Route path="/" element={<Main financials={filteredFinancials} />} /> {/* Default route */}
               <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
               <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
-
+              <Route path="/client_partner" element={<Main4 />} /> {/* Main3 component route */}
               <Route path="/thought_Leadership" element={<Main5 />} />
               <Route path="/north_Star" element={<Main6 />} />
               <Route path="/GTM_Improvement" element={<Main7 />} />
-
+              <Route path="/operations_Customer" element={<Main8 />} />
               <Route path="/operations_Hcltech" element={<Main9 />} />
               <Route path="/customer_Delight" element={<Main10 />} />
-
+              <Route path="/dex" element={<Main11 />} />
               <Route path="/engineer_Delight" element={<Main12 />} />
               <Route path="/engineer_Upskilling" element={<Main13 />} />
               <Route path="/governance_Customer" element={<Main14 />} />
+              <Route path="/governance_Internal" element={<Main15 />} /> {/* Assuming Main14 is used for both */}
+              <Route path="*" element={<div>Page Not Found</div>} /> {/* Fallback route for unmatched paths */}
             </Routes>
           </div>
         </div>
