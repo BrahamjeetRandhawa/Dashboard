@@ -16,7 +16,7 @@ import Main4 from './Main4'; // Import the Main4 component
 import Main5 from './Main5'; // Import the Main5 component
 import Main6 from './Main6'; // Import the Main6 component
 import Main7 from './Main7'; // Import the Main7 component
-
+import Main8 from './Main8'; // Import the Main8 component
 import Main9 from './Main9'; // Import the Main9 component
 import Main10 from './Main10'; // Import the Main10 component
 
@@ -129,7 +129,7 @@ function App() {
               <Route path="/thought_Leadership" element={<Main5 />} />
               <Route path="/north_Star" element={<Main6 />} />
               <Route path="/GTM_Improvement" element={<Main7 />} />
-
+              <Route path="/operations_Customer" element={<Main8 />} />
               <Route path="/operations_Hcltech" element={<Main9 />} />
               <Route path="/customer_Delight" element={<Main10 />} />
 
