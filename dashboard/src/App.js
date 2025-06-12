@@ -12,7 +12,7 @@ import Filter from './Filter'; // Import the Filter component
 import Main from './Main'; // Import the Main component
 import Main2 from './Main2'; // Import the Main2 component
 import Main3 from './Main3'; // Import the Main3 component
-
+import Main4 from './Main4'; // Import the Main4 component
 import Main5 from './Main5'; // Import the Main5 component
 import Main6 from './Main6'; // Import the Main6 component
 import Main7 from './Main7'; // Import the Main7 component
@@ -125,7 +125,7 @@ function App() {
               <Route path="/" element={<Main financials={filteredFinancials} />} /> {/* Default route */}
               <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
               <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
-
+              <Route path="/client_partner" element={<Main4 />} /> {/* Main3 component route */}
               <Route path="/thought_Leadership" element={<Main5 />} />
               <Route path="/north_Star" element={<Main6 />} />
               <Route path="/GTM_Improvement" element={<Main7 />} />

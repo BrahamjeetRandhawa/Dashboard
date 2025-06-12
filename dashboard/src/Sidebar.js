@@ -11,7 +11,7 @@ function Sidebar() {
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>FINANCIALS</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/demand" className={({ isActive }) => isActive ? "active-link" : ""}>DEMAND VIEW</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/fulfilment" className={({ isActive }) => isActive ? "active-link" : ""}>FULFILMENT VIEW</NavLink></li>
-        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><a href="#CLIENT PARTNER FOCUS" className={({ isActive }) => isActive ? "active-link" : ""}>CLIENT PARTNER FOCUS</a></li>
+        <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="client_partner" className={({ isActive }) => isActive ? "active-link" : ""}>CLIENT PARTNER FOCUS</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/thought_Leadership" className={({ isActive }) => isActive ? "active-link" : ""}> THOUGHT LEADERSHIP DEMONSTRATION</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/north_Star" className={({ isActive }) => isActive ? "active-link" : ""}>NORTH STAR POD</NavLink></li>
         <li className="Sidebar_menu-item"><span className='Sidebar_menu-indicator' /><NavLink to="/GTM_improvement" className={({ isActive }) => isActive ? "active-link" : ""}>GTM IMPROVEMENT FOCUS</NavLink></li>

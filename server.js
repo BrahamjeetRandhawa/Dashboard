@@ -34,6 +34,10 @@ app.get('/api/data', (req, res) => {
     const fulfilmentViewSheet = workbook.Sheets['Fulfilment_view'];
     const fulfilmentViewData = xlsx.utils.sheet_to_json(fulfilmentViewSheet);
 
+    // Client Partner Focus uitlezen
+    const clientPartnerSheet = workbook.Sheets['Client_partner'];
+    const clientPartnerData = xlsx.utils.sheet_to_json(clientPartnerSheet);
+
     // Thought Leadership Demonstration uitlezen
     const thoughtLeadershipSheet = workbook.Sheets['Thought_leadership'];
     const thoughtLeadershipData = xlsx.utils.sheet_to_json(thoughtLeadershipSheet);
@@ -70,6 +74,7 @@ app.get('/api/data', (req, res) => {
         financials: financialData,
         demandView: demandViewData,
         fulfilmentView: fulfilmentViewData,
+        clientPartner: clientPartnerData,
         thoughtLeadership: thoughtLeadershipData,
         northStar: northStarData,
         gtmImprovement: gtmImprovementData,
