@@ -61,7 +61,6 @@
     margin-right: 1.5em;
     animation: fillCircle 2s ease forwards;
     --percentage: 0deg;
-
     background: conic-gradient(var(--color, #00bfff) var(--percentage, 0deg), #eee 0deg);
 }
 
@@ -76,8 +75,6 @@
         background: conic-gradient(var(--color, #00bfff) var(--target-percentage, 0deg), #eee 0deg);
     }
 }
-
-/* background: `conic-gradient(${color} ${item.percentage * 3.6}deg, #eee 0deg)` */
 
 .Circle5::before {
     content: '';
@@ -118,6 +115,8 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+
 
 @media (max-width: 1860px) {
     
@@ -161,14 +160,14 @@
         
     }
     .Main-title5 > h2 {
-    font-size: 18px;
-    font-weight: 600;
+        font-size: 18px;
+        font-weight: 600;
     }
     .Main-title5 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Main5-h3 {
-    font-size: 26px;
+        font-size: 26px;
     }
     .Box5 {
         margin-top: 1em;
@@ -212,14 +211,14 @@
         margin: auto;
     }
     .Main-title5 > h2 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .Main-title5 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Main5-h3 {
-    font-size: 22px;
+        font-size: 22px;
     }
     .Box5 {
         margin-top: 1em;
@@ -243,7 +242,7 @@
         font-size: 24px;
     }
     .no-circle_percentage {
-    font-size: 24px;
+        font-size: 24px;
     }
 }
 

@@ -2,7 +2,7 @@ import "./Mainstyle.css";
 import CircleAnimation from "./circleAnimation";
 import TypingHeading from "./textAnimation";
 import React, { Fragment } from "react";
-// import Filter from "./Filter";
+
 
 function Main({ financials }) {
 
@@ -12,14 +12,10 @@ function Main({ financials }) {
     groupedData.push(financials.slice(i, i + 3));
   }
 
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
  
 
   return (
     <div className="Main-style">
-      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title">
             <h2>Financials<TypingHeading text={financials[0]?.heading || ""} speed={75} /></h2>
             <p>Source: PP</p>

@@ -3,7 +3,6 @@ import CircleAnimation from "./circleAnimation";
 import TypingHeading from "./textAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-// import Filter from "./Filter";
 
 function Main14() {
 
@@ -21,14 +20,9 @@ function Main14() {
     groupedData.push(governanceCustomer.slice(i, i + 1));
   }
 
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
- 
 
   return (
     <div className="Main-style14">
-      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title14">
             <h2>GOVERNANCE - CUSTOMER FACING <TypingHeading text={governanceCustomer[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>

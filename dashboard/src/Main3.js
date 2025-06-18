@@ -15,13 +15,8 @@ function Main3() {
   .catch(err => console.error(err));
   },[]);
 
-
   const data = fulfilmentView
 
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
- 
 
   return (
     <div className="Main-style3">

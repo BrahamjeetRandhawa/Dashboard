@@ -1,7 +1,7 @@
 import "./Mainstyle5.css";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-// import Filter from "./Filter";
+
 
 function Main5() {
 
@@ -19,14 +19,10 @@ function Main5() {
     groupedData.push(thoughtLeadership.slice(i, i + 1));
   }
 
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
  
 
   return (
     <div className="Main-style5">
-      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title5">
             <h2>Thought Leadership Demonstration <span className="dynamicHeading">{thoughtLeadership[0]?.heading}</span></h2>
             <p>Source: Demand Tracker</p>

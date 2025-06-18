@@ -3,7 +3,6 @@ import React, { useEffect, useState, Fragment } from "react";
 import TypingHeading from "./textAnimation";
 import CircleAnimation from "./circleAnimation";
 import axios from "axios";
-// import Filter from "./Filter";
 
 function Main13() {
 
@@ -20,15 +19,10 @@ function Main13() {
   for (let i = 0; i < engineerUpskilling.length; i += 1) {
     groupedData.push(engineerUpskilling.slice(i, i + 1));
   }
-
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
  
 
   return (
     <div className="Main-style13">
-      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title13">
             <h2>ENGINEER DELIGHT <TypingHeading text={engineerUpskilling[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>

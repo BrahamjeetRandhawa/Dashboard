@@ -64,11 +64,6 @@ function App() {
     })
     .catch(err => console.error(err));
     },[]);
-  
-    // const filteredFinancials = financials.filter((item) => 
-    // Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim()));
-
-
 
 
     const applyFilters = () => {
@@ -86,27 +81,6 @@ function App() {
       }
     };
 
-
-
-
-    // const applyFilters = () => {
-    //   const activeFilters = Object.fromEntries(
-    //     Object.entries(filters).filter(([_, val]) => val && val !== "All")
-    //   );
-
-    //   const filtered = financials.filter(item =>
-    //     Object.entries(activeFilters).every(([key, val]) =>
-    //     String(item[key]).trim() === String(val).trim()
-    // )
-    //   );
-    //   setFilteredFinancials(filtered);
-    // };
-
-
-    // const noFiltersSelected = Object.values(filters).every(val => val);
-
-    // const filteredFinancials =noFiltersSelected ? financials.slice(0, 9) : financials.filter((item) => Object.entries(filters).every(([key, val]) => !val || String(item[key]).trim() === String(val).trim())); 
-  
   return (
       <div className="App-body">
         <header>
@@ -123,10 +97,10 @@ function App() {
 
           <div className="Main-content">
             <Routes>
-              <Route path="/" element={<Main financials={filteredFinancials} />} /> {/* Default route */}
-              <Route path="/demand" element={<Main2 />} /> {/* Main component route */}
-              <Route path="/fulfilment" element={<Main3 />} /> {/* Main2 component route */}
-              <Route path="/client_partner" element={<Main4 />} /> {/* Main3 component route */}
+              <Route path="/" element={<Main financials={filteredFinancials} />} /> 
+              <Route path="/demand" element={<Main2 />} /> 
+              <Route path="/fulfilment" element={<Main3 />} /> 
+              <Route path="/client_partner" element={<Main4 />} /> 
               <Route path="/thought_Leadership" element={<Main5 />} />
               <Route path="/north_Star" element={<Main6 />} />
               <Route path="/GTM_Improvement" element={<Main7 />} />
@@ -137,7 +111,7 @@ function App() {
               <Route path="/engineer_Delight" element={<Main12 />} />
               <Route path="/engineer_Upskilling" element={<Main13 />} />
               <Route path="/governance_Customer" element={<Main14 />} />
-              <Route path="/governance_Internal" element={<Main15 />} /> {/* Assuming Main14 is used for both */}
+              <Route path="/governance_Internal" element={<Main15 />} /> 
               <Route path="*" element={<div>Page Not Found</div>} /> {/* Fallback route for unmatched paths */}
             </Routes>
           </div>

@@ -3,7 +3,6 @@ import CircleAnimation from "./circleAnimation";
 import TypingHeading from "./textAnimation";
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-// import Filter from "./Filter";
 
 function Main6() {
 
@@ -20,15 +19,10 @@ function Main6() {
   for (let i = 0; i < northStar.length; i += 1) {
     groupedData.push(northStar.slice(i, i + 1));
   }
-
-  // const colors = ["#ffff00", "#ff0000", "#0000ff"];
-  // above 100% green, Between 95 and 100% amber, Below 95% red
-  
  
 
   return (
     <div className="Main-style6">
-      {/* <Filter filters={filters} setFilters={setFilters} options={options} /> */}
         <div className="Main-title6">
             <h2>NORTH STAR POD <TypingHeading text={northStar[0]?.heading || ""} speed={75} /></h2>
             <p>Source: Demand Tracker</p>

@@ -23,13 +23,11 @@
     grid-template-rows: auto auto auto;
 }
 
-
 .Box3 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    
     padding: 2em;
 }
 
@@ -75,10 +73,6 @@
     border-bottom: 1px solid black;
 }
 
-
-
-
-
 .Circle3 {
     position: relative;
     height: 9em;
@@ -90,11 +84,8 @@
     margin-right: 1em;
     animation: fillCircle 2s ease forwards;
     --percentage: 0deg;
-
     background: conic-gradient(var(--color, #00bfff) var(--percentage, 0deg), #eee 0deg);
 }
-
-
 
 .Circle3::before {
     content: '';
@@ -115,10 +106,6 @@
     z-index: 2;
     color: blue;
 }
-
-
-
-
 
 .Box3-id-1 .Main3-h3 {
     display: none;
@@ -153,18 +140,6 @@
     font-weight: light;
     margin-top: 0em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -205,7 +180,6 @@
         height: 80%;
     }
     
-
     .Box3-id-1 .Main3-h3 {
         display: none;
     }
@@ -291,11 +265,11 @@
         margin: auto;
     }
     .Main-title3 > h2 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .Main-title3 > p {
-    font-size: 12px;
+        font-size: 12px;
     }
     .Box3 {
         padding: 1.5em;
